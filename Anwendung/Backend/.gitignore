@@ -1,0 +1,64 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage (for Jest or other test coverage tools)
+coverage/
+
+# Built files (e.g., for React frontend build)
+build/
+dist/
+
+# AWS-specific files
+.aws-sam/
+.cdk.out/
+
+# MacOS
+.DS_Store
+
+# AWS Elastic Beanstalk
+.elasticbeanstalk/
+.elasticbeanstalk/*.cfg
+.elasticbeanstalk/*.log
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# Docker
+docker-compose.override.yml
+docker-compose.override.yaml
+.dockerignore
+Dockerfile
+.docker/
+
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+
+# Test results
+test-output/
+test-results.xml
+
+# Optional npm cache directory
+.npm/
+ 
+# ESLint and Prettier cache
+.eslintcache
+.prettiercache
+
+# CI/CD pipeline config files (if sensitive)
+.github/workflows/*.yml
