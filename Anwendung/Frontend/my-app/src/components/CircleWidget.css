@@ -1,0 +1,44 @@
+.circle-widget {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Optionaler Hintergrund */
+  }
+  
+  .segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer; /* Zeigt an, dass es interaktiv ist */
+  }
+  
+  .segment:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Beispiel für unterschiedliche Farben der Segmente */
+  .segment-1 {
+    background-color: #ff6347; /* Tomate */
+  }
+  
+  .segment-2 {
+    background-color: #ffd700; /* Gold */
+  }
+  
+  .segment-3 {
+    background-color: #4caf50; /* Grün */
+  }
+  
+  .segment-4 {
+    background-color: #1e90ff; /* Blau */
+  }
+  
