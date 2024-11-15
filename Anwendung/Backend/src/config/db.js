@@ -1,26 +1,31 @@
-// config/db.js
+require('dotenv').config();
 const { Sequelize } = require('sequelize');
 
-// Erstelle eine Instanz von Sequelize für MySQL
 const sequelize = new Sequelize(
-  process.env.DB_NAME,      // DB Name
-  process.env.DB_USER,      // DB Benutzer
-  process.env.DB_PASSWORD,  // DB Passwort
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
   {
-    host: process.env.DB_HOST,    // DB Host (RDS Endpoint)
-    dialect: 'mysql',             // Datenbanktyp
-    logging: false,               // Verhindert, dass Sequelize SQL Queries in der Konsole ausgibt
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    dialect: process.env.DB_DIALECT,
+    logging: console.log, // Debug-Logs aktivieren
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
   }
 );
 
 const connectDB = async () => {
   try {
     await sequelize.authenticate();
-    console.log('MySQL Verbindung erfolgreich');
+    console.log('Verbindung zur Datenbank erfolgreich hergestellt.');
   } catch (error) {
-    console.error('Fehler bei der DB-Verbindung:', error);
-    process.exit(1); // Prozess mit einem Fehlerstatus beenden
+    console.error('Fehler bei der Verbindung zur Datenbank:', error);
   }
 };
 
-module.exports = connectDB;
+module.exports = { sequelize, connectDB }; // Export von sequelize und connectDB
