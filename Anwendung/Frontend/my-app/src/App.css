@@ -1,9 +1,25 @@
-.App {
-  text-align: center;
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Helvetica Neue Light', sans-serif;
+  background-color: #f2f7f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* App Container */
+.App {
+  padding-top: 80px; /* Platz für die Navbar */
+}
+
+/* Logo Animation (optional, kann entfernt werden) */
 .App-logo {
-  height: 40vmin;
+  height: 50px;
   pointer-events: none;
 }
 
@@ -13,26 +29,87 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Header Styles */
+.App-header {
+  background-color: #e3edf0;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Link Styles */
+.App-link {
+  color: #007B7F;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.App-link:hover {
+  color: #005f5f;
+  text-decoration: underline;
+}
+
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Flex Layout (für die Startseite) */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Button Styles */
+button {
+  padding: 10px 20px;
+  background-color: #007B7F;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #005f5f;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #282c34;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .App-header {
+    text-align: center;
+    align-items: center;
+  }
+
+  .container {
+    padding: 10px;
   }
 }
