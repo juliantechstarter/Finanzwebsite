@@ -11,14 +11,14 @@
     align-items: center;
     justify-content: space-between;
     padding: 40px;
-    background-color: #F2F6F8; /* Leichter blauer Hintergrund */
+    background-color: #F2F6F8;
     width: 100%;
     box-sizing: border-box;
   }
   
   /* Textbereich links */
   .text-section {
-    max-width: 50%; /* Text nimmt maximal die Hälfte ein */
+    max-width: 50%;
     padding-right: 20px;
   }
   
@@ -32,7 +32,6 @@
     font-size: 1rem;
     color: #333;
     line-height: 1.6;
-    margin: 0;
   }
   
   /* Bildbereich rechts */
@@ -40,23 +39,55 @@
     max-width: 100%;
     height: auto;
     display: block;
-    border: none; /* Keine Umrandungen */
-    border-radius: 0; /* Keine Abrundungen */
+    border: none;
   }
   
-  /* Reinfade-Animation für das Bild */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateX(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  /* Neuer Bereich für Finanznews */
+  .news-section {
+    padding: 20px 40px;
+    background-color: #E8F0F2;
+    margin-top: 20px;
   }
   
-  .image-section img {
-    animation: fadeIn 1s ease-in-out;
+  .news-section h2 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .news-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .news-item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .news-item h3 {
+    font-size: 1.1rem;
+    color: #0077b6;
+    margin-bottom: 10px;
+  }
+  
+  .news-item p {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .news-item a {
+    font-size: 0.9rem;
+    color: #0077b6;
+    text-decoration: none;
+  }
+  
+  .news-item a:hover {
+    text-decoration: underline;
   }
   
