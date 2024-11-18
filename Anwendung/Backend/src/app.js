@@ -1,23 +1,13 @@
 const express = require('express');
 const transactionRoutes = require('./routes/transactions');
-const { connectDB } = require('./config/db');
-
+require('dotenv').config();
 
 const app = express();
 
-// Middleware: JSON body parser
+// Middleware
 app.use(express.json());
 
-// Verbindet die DB mit AWS RDS
-connectDB();
-
-// Setzt die Routen
+// Routen
 app.use('/transactions', transactionRoutes);
-
-// Error Handler (optional, aber empfehlenswert)
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ message: 'Etwas ist schiefgelaufen!' });
-});
 
 module.exports = app;
