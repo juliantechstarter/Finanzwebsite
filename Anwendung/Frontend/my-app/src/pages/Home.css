@@ -1,0 +1,39 @@
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f2f7f8;
+  }
+  
+  .text-block {
+    flex: 1;
+    background-color: #e3edf0;
+    padding: 40px;
+    border-radius: 8px;
+    color: #333;
+  }
+  
+  .text-block h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .text-block p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .image-block {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
