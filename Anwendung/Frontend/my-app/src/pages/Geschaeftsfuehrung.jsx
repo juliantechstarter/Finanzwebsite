@@ -1,33 +1,36 @@
 import React from 'react';
-import './Unternehmen.css';
-import chef1 from '../assets/chef1.png';
-import chef2 from '../assets/chef2.png';
+import './Geschaeftsfuehrung.css';
+import merlin from '../assets/merlin.png';
+import julian from '../assets/julian.png';
+import marcel from '../assets/marcel.png';
 
-function Unternehmen() {
+function Geschaeftsfuehrung() {
   return (
-    <div className="unternehmen-container">
-      <div className="content-container">
-        <h1>Unternehmergemeinschaft:</h1>
-        <h2>FINAERA gehört mehrheitlich den eigenen Beraterinnen und Beratern</h2>
+    <div className="geschaeftsfuehrung-container">
+      {/* Blauer Rahmen hinter dem Text */}
+      <div className="text-container">
+        <h1>Gemeinsam vorangehen: Die Geschäftsleitung von Finaera</h1>
         <p>
-          Beraterinnen und Berater haben die Möglichkeit, sich als Gesellschafter am Unternehmen zu beteiligen. 
-          Das ist unser Anliegen, denn nur so bleibt FINAERA dauerhaft frei von Produktvorgaben. 
-          Bis zu 14 Gesellschafter bilden die Unternehmergemeinschaft, die stellvertretend alle grundsätzlichen 
-          Unternehmensentscheidungen mittreffen und mittragen.
-        </p>
-        <p>
-          Besonders entscheidend: Die Gesellschafteranteile werden jeweils zum Nennwert gekauft und auch nach vielen 
-          Jahren der Zugehörigkeit zum gleichen Wert wieder verkauft. Damit bleibt der in der Zwischenzeit 
-          erwirtschaftete Mehrwert im Unternehmen und bildet die Basis für das erfolgreiche Wirtschaften der nächsten Generation.
+          Gemeinsam mit dem Team der Mönchengladbacher ServiceZentrale schafft unsere Geschäftsleitung<br></br> 
+          optimale Rahmenbedingungen für unsere selbstständigen Beraterinnen und Berater. Sie <br></br>
+          sorgen für passende Softwarelösungen, fundierte Aus- und Weiterbildung und stellen die <br></br>
+          kompetente Unterstützung bei Fach- und Produktfragen sicher. Alles für eine optimale <br></br>
+          Beratung im Sinne unserer Kundinnen und Kunden – ohne Vertriebsdruck oder Umsatzvorgaben.
         </p>
       </div>
+
+      {/* Fotos mit langsamerem Fade-In Effekt */}
       <div className="photos-container">
         <div className="photo-item">
-          <img src={chef1} alt="Julian Sänger" className="photo" />
+          <img src={merlin} alt="Dr. Merlin Hellbach" className="photo" />
+          <p>Dr. Merlin Hellbach</p>
+        </div>
+        <div className="photo-item">
+          <img src={julian} alt="Julian Sänger" className="photo" />
           <p>Julian Sänger</p>
         </div>
         <div className="photo-item">
-          <img src={chef2} alt="Marcel Ebel" className="photo" />
+          <img src={marcel} alt="Marcel Ebel" className="photo" />
           <p>Marcel Ebel</p>
         </div>
       </div>
@@ -35,4 +38,4 @@ function Unternehmen() {
   );
 }
 
-export default Unternehmen;
+export default Geschaeftsfuehrung;
