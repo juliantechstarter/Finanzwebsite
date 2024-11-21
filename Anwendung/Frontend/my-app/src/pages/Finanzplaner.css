@@ -30,10 +30,10 @@
 }
 
 .text-section p {
-  font-size: 1rem;
+  font-size: 0,3rem;
   color: #333;
   line-height: 1.6;
-  font-weight: 300; /* Light Schriftstil */
+  font-weight: 250; /* Light Schriftstil */
 }
 
 /* Bildbereich rechts */

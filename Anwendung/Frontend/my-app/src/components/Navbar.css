@@ -1,22 +1,20 @@
-/* Standard Navbar-Styling */
+/* Allgemeines Styling der Navbar */
 .navbar {
-  background-color: #fff;
-  color: #000;
-  padding: 10px 20px;
+  background-color: #222e3c; /* Dunkler Hintergrund */
+  padding: 15px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: 'Helvetica Neue Light', sans-serif;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo-Styling */
+/* Logo */
 .logo {
-  height: 50px;
-  margin-right: 20px;
+  height: 60px;
 }
 
-/* Navigation-Links */
+/* Navbar-Menü */
 .navbar-menu {
   list-style: none;
   display: flex;
@@ -25,57 +23,77 @@
   padding: 0;
 }
 
-/* Standard Styling für Links */
-li {
+/* Menüpunkte */
+.navbar-menu li {
   position: relative;
-  margin-right: 20px;
+  margin-right: 25px;
   font-weight: 300;
+  transition: all 0.3s ease;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-  padding: 5px 10px;
-  font-weight: 300;
-  transition: color 0.2s ease;
+.navbar-menu li:last-child {
+  margin-right: 0;
 }
 
-a:hover {
-  color: #0077b6;
+/* Gradient-Text (Goldene Schrift) */
+.gradient-text {
+  background: linear-gradient(90deg, #e8a81f, #ffe28a, #c78d21); /* Exakter Verlauf wie im Logo */
+  background-size: 200%;
+  background-position: 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: background-position 0.5s ease, transform 0.2s ease;
 }
 
-/* Dropdown-Menü Styling */
+.gradient-text:hover {
+  background-position: 100%; /* Animierter Verlauf beim Hover */
+  transform: scale(1.1); /* Leichte Vergrößerung beim Hover */
+}
+
+/* Dropdown-Menü */
 .dropdown {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 10px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Weißer Hintergrund */
+  padding: 0; /* Kein zusätzlicher Abstand */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd; /* Klare Abgrenzung */
   min-width: 200px;
-  z-index: 100;
+  z-index: 1000;
 }
 
-/* Links im Dropdown-Menü */
+/* Links im Dropdown */
 .dropdown a {
   display: block;
   padding: 10px 15px;
-  color: #000;
+  color: #222e3c; /* Dunkle Schriftfarbe passend zum Balken */
+  font-size: 0.95rem;
+  font-weight: 400;
   white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .dropdown a:hover {
-  background-color: #f0f0f0;
+  background-color: #f7f7f7; /* Leicht hellere Farbe beim Hover */
+  color: #000; /* Schwarze Schriftfarbe beim Hover */
 }
 
-/* Pfeil-Icons für Dropdown-Menüs */
+/* Pfeil neben Dropdown-Menüs */
 .arrow {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-left: 5px;
+  color: transparent;
+  background: linear-gradient(90deg, #d4af37, #ffe28a, #d4af37); /* Gleicher Verlauf wie bei der Schrift */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Responsive Anpassungen */
+/* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -88,7 +106,7 @@ a:hover {
   }
 
   li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .dropdown {
@@ -96,3 +114,26 @@ a:hover {
     box-shadow: none;
   }
 }
+
+/* Sichtbare Navbar */
+.navbar {
+  position: fixed; /* Navbar bleibt oben fixiert */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Sanfte Animation */
+}
+
+/* Wenn die Navbar sichtbar ist */
+.navbar.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Wenn die Navbar versteckt wird */
+.navbar.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+

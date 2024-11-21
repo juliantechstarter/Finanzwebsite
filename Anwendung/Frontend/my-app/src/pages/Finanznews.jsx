@@ -14,7 +14,7 @@ function Finanznews() {
           `https://newsapi.org/v2/everything?q=finanz&apiKey=100f8c2f9ac24a46b4163922a10f3344`
         );
         const data = await response.json();
-        setArticles(data.articles.slice(0, 5)); // Zeige maximal 5 Artikel an
+        setArticles(data.articles.slice(0, 8)); // Zeige maximal 8 Artikel an
       } catch (error) {
         console.error("Fehler beim Abrufen der Finanznews:", error);
       }
@@ -35,8 +35,9 @@ function Finanznews() {
         >
           <h1>Finanznews</h1>
           <p>
-            Sie möchten tiefer in ein bestimmtes Finanzthema eintauchen? Hier finden Sie wertvolle Beiträge,
-            die Ihnen hilfreiches Wissen und spannende Hintergründe liefern.
+            Sie möchten tiefer in ein bestimmtes Finanzthema eintauchen? Hier
+            finden Sie wertvolle Beiträge, die Ihnen hilfreiches Wissen und
+            spannende Hintergründe liefern.
           </p>
         </motion.div>
 
@@ -51,19 +52,34 @@ function Finanznews() {
         </motion.div>
       </div>
 
-      {/* Neuer Bereich für Finanznews-Artikel */}
+      {/* Bereich für Finanznews-Artikel */}
       <div className="news-section">
         <h2>Aktuelle Finanznachrichten</h2>
         <div className="news-list">
           {articles.length > 0 ? (
             articles.map((article, index) => (
-              <div key={index} className="news-item">
+              <motion.div
+                key={index}
+                className="news-item"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }} // Verzögerung pro Artikel
+              >
+                {article.urlToImage && (
+                  <div className="news-image">
+                    <img src={article.urlToImage} alt={article.title} />
+                  </div>
+                )}
                 <h3>{article.title}</h3>
-                <p>{article.description}</p>
-                <a href={article.url} target="_blank" rel="noopener noreferrer">
-                  Mehr lesen
+                <a
+                  href={article.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="read-more"
+                >
+                  Mehr lesen <span className="arrow">→</span>
                 </a>
-              </div>
+              </motion.div>
             ))
           ) : (
             <p>Keine Finanznews verfügbar.</p>
