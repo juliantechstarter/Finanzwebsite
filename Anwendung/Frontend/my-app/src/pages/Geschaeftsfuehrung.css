@@ -2,7 +2,7 @@
 .geschaeftsfuehrung-container {
   width: 100%;
   padding: 40px;
-  background-color: #f2f6f8;
+  background-color: #ffffff;
   text-align: center;
 }
 
@@ -12,7 +12,7 @@
   max-width: none;
   margin: 0; /* Abstand nur unten */
   padding: 20px 40px; /* Einheitliches Padding: 40px links/rechts */
-  background-color: #e0f0f5; /* Blauer Hintergrund */
+  background-color: #d5f2ff; /* Blauer Hintergrund */
   text-align: left; /* Text linksbündig */
   font-size: 0.55rem; /* Kleinere Schriftgröße */
   line-height: 1.4;
@@ -49,8 +49,8 @@
 
 .photo-item {
   text-align: center;
-  background-color: #fff;
-  padding: 15px;
+  background-color: #ffffff;
+  padding: 0px;
   border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 150px;
