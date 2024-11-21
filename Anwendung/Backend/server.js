@@ -1,34 +1,21 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const dotenv = require('dotenv');
-const authRoutes = require('./src/routes/authRoutes');  // Authentifizierungsrouten importieren
-const { connectDB } = require('./src/config/db');  // Datenbankverbindung importieren
+const express = require("express");
+const dotenv = require("dotenv");
+const app = require("./src/app"); // Importiere die Express-App
 
-dotenv.config();  // .env-Datei einladen
+dotenv.config();
 
-const app = express();
-
-// Middleware
-app.use(cors());  // Cross-Origin Resource Sharing erlauben
-app.use(bodyParser.json());  // JSON-Body-Parsing erlauben
-
-// Authentifizierungsrouten einbinden
-app.use('/api/auth', authRoutes);
-
-// Start des Servers
 const PORT = process.env.PORT || 3000;
 
-// Verbindung zur Datenbank herstellen und Server starten
-(async () => {
-  try {
-    await connectDB();  // Datenbankverbindung herstellen
-    console.log('Datenbankverbindung erfolgreich hergestellt.');
+// Wir exportieren nur die App für die Tests, starten den Server jedoch nicht sofort
+function startServer() {
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
 
-    app.listen(PORT, () => {
-      console.log(`Server läuft auf Port ${PORT}`);
-    });
-  } catch (error) {
-    console.error('Fehler beim Starten des Servers:', error.message);
-  }
-})();
+if (require.main === module) {
+  // Wenn die Datei direkt ausgeführt wird, starten wir den Server
+  startServer();
+}
+
+module.exports = { app, startServer }; // Exportiere die App und die Startfunktion

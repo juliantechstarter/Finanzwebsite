@@ -1,13 +1,23 @@
-const express = require('express');
-const transactionRoutes = require('./routes/transactions');
-require('dotenv').config();
+// src/app.js
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const authRoutes = require("./routes/authRoutes");
+const accountRoutes = require("./routes/accountRoutes");
+const budgetRoutes = require("./routes/budgetRoutes");
+const analyticsRoutes = require("./routes/analyticsRoutes");
 
 const app = express();
 
 // Middleware
-app.use(express.json());
+app.use(cors());
+app.use(bodyParser.json());
 
-// Routen
-app.use('/transactions', transactionRoutes);
+// Routes
+app.use("/auth", authRoutes);
+app.use("/accounts", accountRoutes);
+app.use("/budgets", budgetRoutes);
+app.use("/analytics", analyticsRoutes);
+app.use('/api/plaid', require('./routes/plaidRoutes'));
 
-module.exports = app;
+module.exports = app; // Exportiere die App für Tests und den Serverstart

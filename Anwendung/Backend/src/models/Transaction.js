@@ -1,23 +1,11 @@
-const { DataTypes } = require('sequelize');
-const { sequelize } = require('../config/db');
+const { DataTypes } = require("sequelize");
+const sequelize = require("../config/database");
 
-const Transaction = sequelize.define('Transaction', {
-    amount: {
-        type: DataTypes.FLOAT,
-        allowNull: false
-        // validation rules can be added here
-    },
-    date: {
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW,
-    },
-    type: {
-        type: DataTypes.ENUM('income', 'expense'),
-    allowNull: false,
-  },
-  description: {
-    type: DataTypes.STRING,
-  },
+const Transaction = sequelize.define("Transaction", {
+  description: { type: DataTypes.STRING, allowNull: false },
+  amount: { type: DataTypes.FLOAT, allowNull: false },
+  type: { type: DataTypes.ENUM("income", "fixed", "variable"), allowNull: false },
+  userId: { type: DataTypes.INTEGER, allowNull: false },
 });
 
 module.exports = Transaction;
