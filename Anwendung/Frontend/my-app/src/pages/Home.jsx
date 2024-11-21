@@ -19,7 +19,7 @@ function Home() {
       <div className="image-block">
         <img src={advisorImage} alt="Finanzberater" />
       </div>
-
+      
       {/* Das Rad wird hier eingefügt */}
       <div className="rad-container">
         <svg

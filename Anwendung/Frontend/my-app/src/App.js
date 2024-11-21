@@ -6,6 +6,7 @@ import Finanznews from './pages/Finanznews';
 import Unternehmen from './pages/Unternehmen';
 import Geschaeftsfuehrung from './pages/Geschaeftsfuehrung';
 import Navbar from './components/Navbar';
+import Footer from './components/footer'; // Footer importieren
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/unternehmen" element={<Unternehmen />} />
         <Route path="/geschäftsführung" element={<Geschaeftsfuehrung />} />
       </Routes>
+      <Footer /> {/* Footer hinzufügen */}
     </Router>
   );
 }
