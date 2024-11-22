@@ -10,6 +10,7 @@ import logoImage from '../assets/FINAERALOGO.png'; // Logo-Bild
 
 function Start() {
   const [currentStage, setCurrentStage] = useState(1);
+  const [fadeOut, setFadeOut] = useState(false); // Für sanften Übergang
   const navigate = useNavigate();
 
   // Wechsle zwischen den Bildstufen
@@ -20,17 +21,18 @@ function Start() {
     return () => clearInterval(interval);
   }, []);
 
-  // Navigiere zur Home-Seite
+  // Navigiere zur Home-Seite mit Übergang
   const handleLogoClick = () => {
-    navigate('/home'); // Navigiere zur Home.jsx
+    setFadeOut(true); // Fade-Out starten
+    setTimeout(() => navigate('/home'), 1000); // Nach 1 Sekunde navigieren
   };
 
   return (
-    <div className="start-container">
+    <div className={`start-container ${fadeOut ? 'fade-out' : ''}`}>
       {/* Linker Bereich mit Logo und Text */}
       <div className="start-left">
         <div className="title-container">
-          <h1 className="start-title">Welcome to</h1>
+          <h1 className="start-title">Financial Freedom</h1>
           <img
             src={logoImage}
             alt="FINAERA Logo"
