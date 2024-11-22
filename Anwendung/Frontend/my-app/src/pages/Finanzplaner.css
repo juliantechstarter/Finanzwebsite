@@ -47,7 +47,7 @@
 /* Wrapper für das Login-Formular */
 .login-wrapper {
   display: flex;
-  justify-content: center; /* Zentriert das Login-Formular horizontal */
+  justify-content: center; /* Zentriert Login-Formular horizontal */
   align-items: center;
   margin-top: 20px;
   padding: 20px;
@@ -58,7 +58,7 @@
   margin: 20px auto; /* Zentriert den Bereich auf der Seite */
 }
 
-/* Passendes Styling für kleinere Bildschirme */
+/* Styling für kleinere Bildschirme */
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column; /* Stapelt Text und Bild vertikal */
