@@ -163,5 +163,29 @@
 .navbar-links li {
   cursor: pointer;
 }
+.navbar {
+  background: url('../assets/NAVBARBG.png') center no-repeat;
+  background-size: cover; /* Glanzeffekt */
+  height: 70px; /* Höhe der Navbar */
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  height: 100px;
+  z-index: 1010;
+  object-fit: contain
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-right: 90px; /* Verschiebe nach links */
+
+}
 
 
