@@ -35,10 +35,10 @@ function Navbar() {
             <span className="arrow">{showFinanzberatung ? "▾" : "▸"}</span>
             {showFinanzberatung && (
               <div className="dropdown">
-                <Link to="#vorsorge" className="gradient-text">Vorsorge</Link>
-                <Link to="#absicherung" className="gradient-text">Absicherung</Link>
-                <Link to="#vermögen" className="gradient-text">Vermögen</Link>
-                <Link to="#immobilie" className="gradient-text">Immobilie</Link>
+                <Link to="/vorsorge" className="gradient-text">Vorsorge</Link>
+                <Link to="/absicherung" className="gradient-text">Absicherung</Link>
+                <Link to="/vermoegen" className="gradient-text">Vermögen</Link>
+                <Link to="/immobilie" className="gradient-text">Immobilie</Link>
               </div>
             )}
           </li>
