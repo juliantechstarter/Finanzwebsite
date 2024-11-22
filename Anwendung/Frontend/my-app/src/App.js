@@ -13,22 +13,56 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Route für Landing Page ohne Navbar und Footer */}
+        {/* Route für Landing Page */}
         <Route path="/" element={<Start />} />
         
-        {/* Routen mit Navbar und Footer */}
+        {/* Routen für die Seiten mit Navbar und Footer */}
         <Route
-          path="/*"
+          path="/home"
           element={
             <>
               <Navbar />
-              <Routes>
-                <Route path="/home" element={<Home />} />
-                <Route path="/finanzplaner" element={<Finanzplaner />} />
-                <Route path="/finanznews" element={<Finanznews />} />
-                <Route path="/unternehmen" element={<Unternehmen />} />
-                <Route path="/geschäftsführung" element={<Geschaeftsfuehrung />} />
-              </Routes>
+              <Home />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/finanzplaner"
+          element={
+            <>
+              <Navbar />
+              <Finanzplaner />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/finanznews"
+          element={
+            <>
+              <Navbar />
+              <Finanznews />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/unternehmen"
+          element={
+            <>
+              <Navbar />
+              <Unternehmen />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/geschäftsführung"
+          element={
+            <>
+              <Navbar />
+              <Geschaeftsfuehrung />
               <Footer />
             </>
           }

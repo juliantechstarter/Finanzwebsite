@@ -1,17 +1,83 @@
+/* Container Layout */
 .start-container {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: #000000;
+  }
+  
+  /* Linker Bereich */
+  .start-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     padding: 50px;
   }
   
-  .start-images img {
-    width: 200px;
-    height: auto;
-    margin: 20px;
+  .title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .start-title {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  
+  .start-logo {
+    width: 150px;
     cursor: pointer;
   }
   
-  .start-images img:hover {
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
+  /* Rechter Bereich */
+  .start-right {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Bildcontainer */
+  .image-container {
+    position: relative;
+    width: 80%;
+    height: auto;
+  }
+  
+  .main-image {
+    width: 100%;
+    border: 5px solid #f4f4f4;
+    border-radius: 0px;
+  }
+  
+  .side-image-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .side-image {
+    width: 48%; /* Zwei Bilder nebeneinander */
+    border: 5px solid #f4f4f4;
+    border-radius: 0px;
+  }
+  
+  /* Animationen */
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   
