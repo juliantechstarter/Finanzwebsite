@@ -30,10 +30,10 @@
 }
 
 .text-section p {
-  font-size: 0,3rem;
+  font-size: 1rem;
   color: #333;
   line-height: 1.6;
-  font-weight: 250; /* Light Schriftstil */
+  font-weight: 300; /* Light Schriftstil */
 }
 
 /* Bildbereich rechts */
@@ -42,4 +42,35 @@
   height: auto;
   display: block;
   border: none;
+}
+
+/* Wrapper für das Login-Formular */
+.login-wrapper {
+  display: flex;
+  justify-content: center; /* Zentriert das Login-Formular horizontal */
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff; /* Weißer Hintergrund */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+  border-radius: 10px;
+  max-width: 600px; /* Begrenzte Breite für den Login-Bereich */
+  margin: 20px auto; /* Zentriert den Bereich auf der Seite */
+}
+
+/* Passendes Styling für kleinere Bildschirme */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column; /* Stapelt Text und Bild vertikal */
+    text-align: center;
+  }
+
+  .text-section {
+    padding-right: 0;
+    max-width: 100%;
+  }
+
+  .login-wrapper {
+    max-width: 90%;
+  }
 }
