@@ -58,10 +58,11 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff; /* Weißer Hintergrund */
+  background-color: rgba(255, 255, 255, 0.8); /* Transparenter weißer Hintergrund */
+  backdrop-filter: blur(8px); /* Weichzeichner-Effekt auf den Hintergrund */
   padding: 0; /* Kein zusätzlicher Abstand */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  border: 1px solid #ddd; /* Klare Abgrenzung */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtiler Schatten */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Leichte Abgrenzung */
   min-width: 200px;
   z-index: 1000;
 }
@@ -70,7 +71,7 @@
 .dropdown a {
   display: block;
   padding: 10px 15px;
-  color: #222e3c; /* Dunkle Schriftfarbe passend zum Balken */
+  color: #222e3c; /* Dunkle Schriftfarbe */
   font-size: 0.95rem;
   font-weight: 400;
   white-space: nowrap;
@@ -78,7 +79,7 @@
 }
 
 .dropdown a:hover {
-  background-color: #f7f7f7; /* Leicht hellere Farbe beim Hover */
+  background-color: rgba(255, 255, 255, 0.5); /* Hellerer transparenter Hintergrund beim Hover */
   color: #000; /* Schwarze Schriftfarbe beim Hover */
 }
 
@@ -164,4 +165,26 @@
   cursor: pointer;
 }
 
+.navbar {
+  background: url('../assets/NAVBARBG.png') center no-repeat;
+  background-size: cover; /* Glanzeffekt */
+  height: 60px; /* Höhe der Navbar */
+}
 
+.logo {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  height: 80px;
+  z-index: 1010;
+  object-fit: contain
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-right: 90px; /* Verschiebe nach links */
+}

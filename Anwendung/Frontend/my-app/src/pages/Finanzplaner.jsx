@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Login from '../components/Login'; // Korrigierter Pfad zur Login-Komponente
+import Login from '../components/Login';
 import './Finanzplaner.css';
 import finanzplanerImage from '../assets/finanzplaner.jpg';
 

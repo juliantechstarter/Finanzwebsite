@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import './Login.css'; // Der richtige Pfad zur CSS-Datei
-import finaeraLogo from '../assets/FINAERALOGO.png'; // Importiere das Logo
+import './Login.css'; // CSS-Datei für das Styling
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -10,6 +9,7 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
+    // Validierungslogik
     if (!email || !password) {
       setError('Bitte füllen Sie alle Felder aus.');
       return;
@@ -21,45 +21,44 @@ function Login() {
       return;
     }
 
+    // Falls alles korrekt ist, Fehler zurücksetzen
     setError('');
     console.log('E-Mail:', email);
     console.log('Passwort:', password);
   };
 
-  return (
-    <div className="login-page">
-      <div className="login-header">
-        <img src={finaeraLogo} alt="Finaera Logo" className="logo" />
-      </div>
-      <form className="login-form" onSubmit={handleLogin}>
-        {error && <p className="error-message">{error}</p>}
-        <div className="form-group">
-          <input
-            type="email"
-            id="email"
-            placeholder="E-Mail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="password"
-            id="password"
-            placeholder="Kennwort"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <div className="forgot-password">
-          <a href="#">Kennwort vergessen?</a>
-        </div>
-        <button type="submit">Anmelden</button>
-      </form>
-    </div>
-  );
+ 
+      {/* Login-Formular */}
+      <main className="login-container">
+        <form className="login-form" onSubmit={handleLogin}>
+          {error && <p className="error-message">{error}</p>}
+          <div className="form-group">
+            <input
+              type="email"
+              id="email"
+              placeholder="E-Mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="password"
+              id="password"
+              placeholder="Kennwort"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <div className="forgot-password">
+            <a href="#">Kennwort vergessen?</a>
+          </div>
+          <button type="submit">➜ Anmelden</button>
+        </form>
+      </main>
+  ;
 }
 
 export default Login;

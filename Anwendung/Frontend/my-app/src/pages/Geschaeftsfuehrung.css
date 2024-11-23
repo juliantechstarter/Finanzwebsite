@@ -8,22 +8,22 @@
 
 /* Blauer Rahmen hinter dem Text */
 .text-container {
-  width: 130%; /* Der Kasten erstreckt sich über die gesamte Breite */
+  width: 130%; /* Kasten erstreckt sich über die gesamte Breite */
   max-width: none;
   margin: 0; /* Abstand nur unten */
   padding: 20px 40px; /* Einheitliches Padding: 40px links/rechts */
-  background-color: #d5f2ff; /* Blauer Hintergrund */
+  background-color: #000000; /* Blauer Hintergrund */
   text-align: left; /* Text linksbündig */
   font-size: 0.55rem; /* Kleinere Schriftgröße */
   line-height: 1.4;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 300; /* Light für den Text */
-  color: #333;
+  color: #ffffff;
 }
 
 .text-container h1 {
   font-size: 1.6rem; /* Kleinere Überschrift */
-  font-weight: 600; /* Bold Schrift für die Überschrift */
+  font-weight: 600; /* Bold Überschrift */
   font-family: "Helvetica Neue", sans-serif;
   margin-bottom: 20px;
   
@@ -67,7 +67,7 @@
   display: block;
   margin: 0 auto;
   opacity: 0;
-  animation: fadeIn 3s ease forwards; /* Langsamerer Fade-Effekt */
+  animation: fadeIn 3s ease forwards; /* Langs. Fade-Effekt */
 }
 
 @keyframes fadeIn {

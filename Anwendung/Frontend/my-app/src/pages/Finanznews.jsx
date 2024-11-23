@@ -14,7 +14,7 @@ function Finanznews() {
           `https://newsapi.org/v2/everything?q=finanz&apiKey=100f8c2f9ac24a46b4163922a10f3344`
         );
         const data = await response.json();
-        setArticles(data.articles.slice(0, 8)); // Zeige maximal 8 Artikel an
+        setArticles(data.articles.slice(0, 12)); // Zeige maximal 12 Artikel an
       } catch (error) {
         console.error("Fehler beim Abrufen der Finanznews:", error);
       }
