@@ -15,15 +15,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/finanzplaner" element={<Finanzplaner />} />
-        <Route path="/finanznews" element={<Finanznews />} />
-        <Route path="/unternehmen" element={<Unternehmen />} />
-        <Route path="/geschäftsführung" element={<Geschaeftsfuehrung />} />
-        <Route path="/startplaner" element={<StartPlaner />} /> {/* StartPlaner Route hinzufügen */}
         {/* Route für Landing Page */}
         <Route path="/" element={<Start />} />
-        
+
         {/* Routen für die Seiten mit Navbar und Footer */}
         <Route
           path="/home"
@@ -71,6 +65,17 @@ function App() {
             <>
               <Navbar />
               <Geschaeftsfuehrung />
+              <Footer />
+            </>
+          }
+        />
+        {/* StartPlaner Route hinzufügen */}
+        <Route
+          path="/startplaner"
+          element={
+            <>
+              <Navbar />
+              <StartPlaner />
               <Footer />
             </>
           }
