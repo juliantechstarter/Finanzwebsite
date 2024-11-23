@@ -171,13 +171,15 @@
   height: 60px; /* Höhe der Navbar */
 }
 
+/* Logo */
 .logo {
   position: absolute;
   top: 12px;
   left: 20px;
   height: 80px;
   z-index: 1010;
-  object-fit: contain
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Sanfte Übergänge */
 }
 
 .navbar-menu {
@@ -187,4 +189,10 @@
   margin: 0;
   padding: 0;
   margin-right: 90px; /* Verschiebe nach links */
+}
+
+/* Hover-Effekt für das Logo */
+.logo:hover {
+  transform: scale(1.1); /* Vergrößert das Logo leicht */
+  filter: brightness(1.2); /* Erhöht die Helligkeit des Logos */
 }
