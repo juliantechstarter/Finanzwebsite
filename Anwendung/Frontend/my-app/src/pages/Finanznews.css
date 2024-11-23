@@ -23,13 +23,14 @@
 }
 
 .text-section h1 {
-  font-size: 2rem;
+  font-family: 'Helvetica Neue Med', sans-serif;
+  font-size: 24px; /* Feste Schriftgröße */
   color: #000;
   margin-bottom: 10px;
 }
 
 .text-section p {
-  font-size: 1rem;
+  font-size: 16px; /* Feste Schriftgröße */
   color: #333;
   line-height: 1.6;
 }
@@ -50,7 +51,7 @@
 }
 
 .news-section h2 {
-  font-size: 1.5rem;
+  font-size: 20px; /* Feste Schriftgröße */
   color: #000;
   margin-bottom: 20px;
 }
@@ -99,7 +100,7 @@
 
 /* Überschriften */
 .news-item h3 {
-  font-size: 1.1rem;
+  font-size: 14px; /* Feste Schriftgröße */
   color: #222e3c;
   margin-bottom: 10px;
   display: -webkit-box;
@@ -114,7 +115,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
+  font-size: 14px; /* Feste Schriftgröße */
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
@@ -133,5 +134,5 @@
 
 .read-more .arrow {
   margin-left: 10px;
-  font-size: 1.1rem;
+  font-size: 16px; /* Feste Schriftgröße */
 }

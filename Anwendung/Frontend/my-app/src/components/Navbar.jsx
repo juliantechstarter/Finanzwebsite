@@ -27,11 +27,14 @@ function Navbar() {
           <img src={logo} alt="Finaera Logo" className="logo" />
         </Link>
         <ul className="navbar-menu">
+          {/* Finanzberatung Menüpunkt */}
           <li
             onMouseEnter={() => setShowFinanzberatung(true)}
             onMouseLeave={() => setShowFinanzberatung(false)}
           >
-            <span className="gradient-text">Finanzberatung</span>
+            <Link to="/home" className="gradient-text">
+              Finanzberatung
+            </Link>
             <span className="arrow">{showFinanzberatung ? "▾" : "▸"}</span>
             {showFinanzberatung && (
               <div className="dropdown">
@@ -42,8 +45,22 @@ function Navbar() {
               </div>
             )}
           </li>
-          <li><Link to="/finanzplaner" className="gradient-text">Finanzplaner</Link></li>
-          <li><Link to="/finanznews" className="gradient-text">Finanznews</Link></li>
+
+          {/* Finanzplaner Menüpunkt */}
+          <li>
+            <Link to="/finanzplaner" className="gradient-text">
+              Finanzplaner
+            </Link>
+          </li>
+
+          {/* Finanznews Menüpunkt */}
+          <li>
+            <Link to="/finanznews" className="gradient-text">
+              Finanznews
+            </Link>
+          </li>
+
+          {/* Unternehmen Menüpunkt */}
           <li
             onMouseEnter={() => setShowUnternehmen(true)}
             onMouseLeave={() => setShowUnternehmen(false)}
@@ -52,8 +69,12 @@ function Navbar() {
             <span className="arrow">{showUnternehmen ? "▾" : "▸"}</span>
             {showUnternehmen && (
               <div className="dropdown">
-                <Link to="/unternehmen" className="gradient-text">Über das Unternehmen</Link>
-                <Link to="/geschäftsführung" className="gradient-text">Geschäftsführung</Link>
+                <Link to="/unternehmen" className="gradient-text">
+                  Über das Unternehmen
+                </Link>
+                <Link to="/geschäftsführung" className="gradient-text">
+                  Geschäftsführung
+                </Link>
               </div>
             )}
           </li>

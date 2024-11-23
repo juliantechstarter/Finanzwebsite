@@ -1,13 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Login from '../components/Login';
-import './Finanzplaner.css';
-import finanzplanerImage from '../assets/finanzplaner.jpg';
+import React from "react";
+import { motion } from "framer-motion";
+import Login from "../components/Login";
+import "./Finanzplaner.css";
+import finanzplanerImage from "../assets/finanzplaner.jpg";
 
 function Finanzplaner() {
   return (
     <div className="finanzplaner-page">
       <div className="content-wrapper">
+        {/* Text-Sektion mit Slide-In von links */}
         <motion.div
           className="text-section"
           initial={{ opacity: 0, x: -50 }}
@@ -26,6 +27,8 @@ function Finanzplaner() {
             häufig unzuverlässig und schnell veraltet.
           </p>
         </motion.div>
+
+        {/* Bild-Sektion mit Fade-In von oben */}
         <motion.div
           className="image-section"
           initial={{ opacity: 0, y: -50 }}
@@ -35,6 +38,8 @@ function Finanzplaner() {
           <img src={finanzplanerImage} alt="Finanzplaner" />
         </motion.div>
       </div>
+
+      {/* Login-Bereich */}
       <div className="login-wrapper">
         <Login />
       </div>

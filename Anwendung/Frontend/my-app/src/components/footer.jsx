@@ -24,10 +24,10 @@ function Footer() {
         <div className="footer-column">
           <h3>Alles zu FINAERA</h3>
           <ul>
-            <li>Warum FINAERA</li>
-            <li>Nachhaltigkeit</li>
-            <li>Geschäftsleitung</li>
-            <li>Akademien etc</li>
+            <li><Link to="/warum-finaera">Warum FINAERA</Link></li>
+            <li><Link to="/nachhaltigkeit">Nachhaltigkeit</Link></li>
+            <li><Link to="/geschaeftsleitung">Geschäftsleitung</Link></li>
+            <li><Link to="/akademien">Akademien etc</Link></li>
           </ul>
         </div>
 
@@ -35,16 +35,16 @@ function Footer() {
         <div className="footer-column">
           <h3>Mehr Finanzwissen für Sie</h3>
           <ul>
-            <li>Altersvorsorge für junge Menschen</li>
-            <li>Altersvorsorge für Best Ager</li>
-            <li>Altersvorsorge kurz vor dem Ruhestand</li>
+            <li><Link to="/altersvorsorge-junge">Altersvorsorge für junge Menschen</Link></li>
+            <li><Link to="/altersvorsorge-bester-ager">Altersvorsorge für Best Ager</Link></li>
+            <li><Link to="/altersvorsorge-ruhestand">Altersvorsorge kurz vor dem Ruhestand</Link></li>
           </ul>
         </div>
       </div>
 
       {/* Impressum und Copyright */}
       <div className="footer-bottom">
-        <Link to="/impressum">Impressum</Link> | Datenschutz
+        <Link to="/impressum">Impressum</Link> | <Link to="/datenschutz">Datenschutz</Link>
         <span> © 2024 FINAERA</span>
       </div>
     </footer>
