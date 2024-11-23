@@ -1,0 +1,38 @@
+.startplaner-container {
+  display: flex;
+  height: calc(100vh - 70px);
+  margin-top: 70px;
+}
+
+.sidebar {
+  width: 10%;
+  background-color: #6c6c6c;
+  color: #5b1111;
+  padding: 2rem;
+  position: fixed;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.sidebar li:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  margin-left: 20%;
+  padding: 2rem;
+  width: 80%;
+  overflow-y: auto;
+  background-color: #ffffff;
+}
