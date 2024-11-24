@@ -6,7 +6,7 @@ const authRoutes = require("./routes/authRoutes");
 const accountRoutes = require("./routes/accountRoutes");
 const budgetRoutes = require("./routes/budgetRoutes");
 const analyticsRoutes = require("./routes/analyticsRoutes");
-
+const transactionRoutes = require('./routes/transactionRoutes');
 const app = express();
 
 // Middleware
@@ -18,6 +18,7 @@ app.use("/auth", authRoutes);
 app.use("/accounts", accountRoutes);
 app.use("/budgets", budgetRoutes);
 app.use("/analytics", analyticsRoutes);
+app.use('/transactions', transactionRoutes);
 app.use('/api/plaid', require('./routes/plaidRoutes'));
 
 module.exports = app; // Exportiere die App für Tests und den Serverstart
