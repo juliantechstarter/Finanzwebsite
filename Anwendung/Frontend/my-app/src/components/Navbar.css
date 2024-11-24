@@ -196,3 +196,8 @@
   transform: scale(1.1); /* Vergrößert das Logo leicht */
   filter: brightness(1.2); /* Erhöht die Helligkeit des Logos */
 }
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
