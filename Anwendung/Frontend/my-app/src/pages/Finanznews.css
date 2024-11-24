@@ -1,62 +1,138 @@
 /* Allgemeines Styling für die Seite */
 .finanznews-page {
-    font-family: 'Helvetica Neue Light', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Wrapper für Text und Bild */
-  .content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    background-color: #F2F6F8; /* Leichter blauer Hintergrund */
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  /* Textbereich links */
-  .text-section {
-    max-width: 50%; /* Text nimmt maximal die Hälfte ein */
-    padding-right: 20px;
-  }
-  
-  .text-section h1 {
-    font-size: 2rem;
-    color: #000;
-    margin-bottom: 10px;
-  }
-  
-  .text-section p {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-  }
-  
-  /* Bildbereich rechts */
-  .image-section img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border: none; /* Keine Umrandungen */
-    border-radius: 0; /* Keine Abrundungen */
-  }
-  
-  /* Reinfade-Animation für das Bild */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateX(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .image-section img {
-    animation: fadeIn 1s ease-in-out;
-  }
-  
+  font-family: 'Helvetica Neue Light', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Wrapper für Text und Bild */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px;
+  background-color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Textbereich links */
+.text-section {
+  max-width: 50%;
+  padding-right: 20px;
+}
+
+.text-section h1 {
+  font-family: 'Helvetica Neue Med', sans-serif;
+  font-size: 24px; /* Feste Schriftgröße */
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.text-section p {
+  font-size: 16px; /* Feste Schriftgröße */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Bildbereich rechts */
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
+
+/* Neuer Bereich für Finanznews */
+.news-section {
+  padding: 20px 40px;
+  background-color: #f5f5f5;
+  margin-top: 20px;
+}
+
+.news-section h2 {
+  font-size: 20px; /* Feste Schriftgröße */
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* News-Artikel-Container */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Styling für die Artikelkarten */
+.news-item {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Bildbereich der Karte */
+.news-image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 0px;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Überschriften */
+.news-item h3 {
+  font-size: 14px; /* Feste Schriftgröße */
+  color: #222e3c;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Styling für den "Mehr lesen"-Button */
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px; /* Feste Schriftgröße */
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #d4af37, #ffe28a, #d4af37);
+  background-size: 200%;
+  transition: background-position 0.3s ease, transform 0.2s ease;
+  margin-top: auto;
+}
+
+.read-more:hover {
+  background-position: 100%;
+  transform: translateY(-2px);
+}
+
+.read-more .arrow {
+  margin-left: 10px;
+  font-size: 16px; /* Feste Schriftgröße */
+}

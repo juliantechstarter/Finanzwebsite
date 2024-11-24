@@ -1,40 +1,87 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
-import logo from '../assets/FINAERA_LOGO.png';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import logo from "../assets/FINAERALOGO_blackBG.png"; // Neues Logo importieren
 
 function Navbar() {
   const [showFinanzberatung, setShowFinanzberatung] = useState(false);
-  const [showÜberFinaera, setShowÜberFinaera] = useState(false);
+  const [showUnternehmen, setShowUnternehmen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setIsVisible(!(currentScrollPos > 60 && prevScrollPos < currentScrollPos));
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
 
   return (
-    <nav className="navbar">
-      <img src={logo} alt="Finaera Logo" className="logo" />
-      <ul>
-        <li><Link to="/finanzplaner">Finanzplaner</Link></li>
-        <li onMouseEnter={() => setShowFinanzberatung(true)} onMouseLeave={() => setShowFinanzberatung(false)}>
-          Finanzberatung <span className="arrow">{showFinanzberatung ? '▾' : '▸'}</span>
-          {showFinanzberatung && (
-            <div className="dropdown">
-              <a href="#vorsorge">Vorsorge</a>
-              <a href="#absicherung">Absicherung</a>
-              <a href="#vermögen">Vermögen</a>
-              <a href="#immobilie">Immobilie</a>
-            </div>
-          )}
-        </li>
-        <li><Link to="/finanznews">Finanznews</Link></li>
-        <li onMouseEnter={() => setShowÜberFinaera(true)} onMouseLeave={() => setShowÜberFinaera(false)}>
-          über Finaera <span className="arrow">{showÜberFinaera ? '▾' : '▸'}</span>
-          {showÜberFinaera && (
-            <div className="dropdown">
-              <Link to="/unternehmen">Unternehmen</Link>
-              <Link to="/geschäftsführung">Geschäftsführung</Link>
-            </div>
-          )}
-        </li>
-      </ul>
-    </nav>
+    <>
+      <nav className={`navbar ${isVisible ? "visible" : "hidden"}`}>
+        <Link to="/" className="logo-container">
+          <img src={logo} alt="Finaera Logo" className="logo" />
+        </Link>
+        <ul className="navbar-menu">
+          {/* Finanzberatung Menüpunkt */}
+          <li
+            onMouseEnter={() => setShowFinanzberatung(true)}
+            onMouseLeave={() => setShowFinanzberatung(false)}
+          >
+            <Link to="/home" className="gradient-text">
+              Finanzberatung
+            </Link>
+            <span className="arrow">{showFinanzberatung ? "▾" : "▸"}</span>
+            {showFinanzberatung && (
+              <div className="dropdown">
+                <Link to="/vorsorge" className="gradient-text">Vorsorge</Link>
+                <Link to="/absicherung" className="gradient-text">Absicherung</Link>
+                <Link to="/vermoegen" className="gradient-text">Vermögen</Link>
+                <Link to="/immobilie" className="gradient-text">Immobilie</Link>
+              </div>
+            )}
+          </li>
+
+          {/* Finanzplaner Menüpunkt */}
+          <li>
+            <Link to="/finanzplaner" className="gradient-text">
+              Finanzplaner
+            </Link>
+          </li>
+
+          {/* Finanznews Menüpunkt */}
+          <li>
+            <Link to="/finanznews" className="gradient-text">
+              Finanznews
+            </Link>
+          </li>
+
+          {/* Unternehmen Menüpunkt */}
+          <li
+            onMouseEnter={() => setShowUnternehmen(true)}
+            onMouseLeave={() => setShowUnternehmen(false)}
+          >
+            <span className="gradient-text">Unternehmen</span>
+            <span className="arrow">{showUnternehmen ? "▾" : "▸"}</span>
+            {showUnternehmen && (
+              <div className="dropdown">
+                <Link to="/unternehmen" className="gradient-text">
+                  Über das Unternehmen
+                </Link>
+                <Link to="/geschäftsführung" className="gradient-text">
+                  Geschäftsführung
+                </Link>
+              </div>
+            )}
+          </li>
+        </ul>
+      </nav>
+      <div style={{ height: "70px" }} /> {/* Platzhalter für die Navbar */}
+    </>
   );
 }
 

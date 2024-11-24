@@ -1,0 +1,124 @@
+/* Basisstruktur */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  background-color: #f0f2f5; /* Heller Hintergrund */
+}
+
+/* Header mit Logo */
+.login-header {
+  width: 100%;
+  background-color: #222e3c; /* Dunkelblauer Header */
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 200px; /* Logo skalieren */
+  height: auto;
+}
+
+/* Login-Container */
+.login-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Formular */
+.login-form {
+  background-color: #ffffff; /* Weißer Hintergrund */
+  padding: 2.5rem;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Abgerundete Ecken */
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input {
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover und Fokus */
+.form-group input:focus {
+  border-color: #d4ac0d; /* Goldene Akzentfarbe */
+  box-shadow: 0px 0px 5px rgba(212, 172, 13, 0.5);
+  outline: none;
+}
+
+/* Fehlernachricht */
+.error-message {
+  color: #ff4d4d;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* Passwort vergessen */
+.forgot-password a {
+  color: #d4ac0d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+  color: #b58e0c;
+}
+
+/* Button */
+button[type="submit"] {
+  background-color: #222e3c;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #002b47;
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+/* Responsivität */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+}

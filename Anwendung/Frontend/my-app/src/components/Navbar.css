@@ -1,42 +1,198 @@
-/* Standard Navbar-Styling */
+/* Allgemeines Styling der Navbar */
 .navbar {
-  background-color: #fff;
-  color: #000;
-  padding: 10px;
+  background-color: #222e3c; /* Dunkler Hintergrund */
+  padding: 15px 30px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-family: 'Helvetica Neue Light', sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo */
 .logo {
-  height: 50px; /* Höhe des Logos */
-  margin-right: 20px;
+  height: 60px;
 }
 
-ul {
+/* Navbar-Menü */
+.navbar-menu {
   list-style: none;
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
 
-li {
+/* Menüpunkte */
+.navbar-menu li {
   position: relative;
-  margin-right: 20px;
-  font-weight: 300; /* Leichte Schriftart */
+  margin-right: 25px;
+  font-weight: 300;
+  transition: all 0.3s ease;
 }
 
-a {
-  text-decoration: none;
-  color: #000; /* Standardfarbe für Links */
-  padding: 5px 10px;
-  font-weight: 300; /* Leichte Schriftart */
+.navbar-menu li:last-child {
+  margin-right: 0;
 }
 
-/* Spezifisches Styling für "Über Finaera" */
-.navbar li a[href*="über-finaera"] {
-  background-color: #000; /* Schwarzer Hintergrund */
-  color: #fff; /* Weißer Text */
-  padding: 5px 10px;
-  border-radius: 0; /* Keine abgerundeten Ecken */
+/* Gradient-Text (Goldene Schrift) */
+.gradient-text {
+  background: linear-gradient(90deg, #e8a81f, #ffe28a, #c78d21); /* Exakter Verlauf wie im Logo */
+  background-size: 200%;
+  background-position: 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: background-position 0.5s ease, transform 0.2s ease;
+}
+
+.gradient-text:hover {
+  background-position: 100%; /* Animierter Verlauf beim Hover */
+  transform: scale(1.1); /* Leichte Vergrößerung beim Hover */
+}
+
+/* Dropdown-Menü */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparenter weißer Hintergrund */
+  backdrop-filter: blur(8px); /* Weichzeichner-Effekt auf den Hintergrund */
+  padding: 0; /* Kein zusätzlicher Abstand */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtiler Schatten */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Leichte Abgrenzung */
+  min-width: 200px;
+  z-index: 1000;
+}
+
+/* Links im Dropdown */
+.dropdown a {
+  display: block;
+  padding: 10px 15px;
+  color: #222e3c; /* Dunkle Schriftfarbe */
+  font-size: 0.95rem;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.5); /* Hellerer transparenter Hintergrund beim Hover */
+  color: #000; /* Schwarze Schriftfarbe beim Hover */
+}
+
+/* Pfeil neben Dropdown-Menüs */
+.arrow {
+  font-size: 0.9rem;
+  margin-left: 5px;
+  color: transparent;
+  background: linear-gradient(90deg, #d4af37, #ffe28a, #d4af37); /* Gleicher Verlauf wie bei der Schrift */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  li {
+    margin-bottom: 15px;
+  }
+
+  .dropdown {
+    position: static;
+    box-shadow: none;
+  }
+}
+
+/* Sichtbare Navbar */
+.navbar {
+  position: fixed; /* Navbar bleibt oben fixiert */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Sanfte Animation */
+}
+
+/* Wenn die Navbar sichtbar ist */
+.navbar.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Wenn die Navbar versteckt wird */
+.navbar.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.navbar {
+  position: fixed; /* Fixiert die Navbar oben */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* Höhe der Navbar */
+  background-color: #000000; /* Hintergrundfarbe */
+  color: #fff;
+  z-index: 1000; /* Überlagert andere Inhalte */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Links innerhalb der Navbar */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li {
+  cursor: pointer;
+}
+
+.navbar {
+  background: url('../assets/NAVBARBG.png') center no-repeat;
+  background-size: cover; /* Glanzeffekt */
+  height: 60px; /* Höhe der Navbar */
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  height: 80px;
+  z-index: 1010;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Sanfte Übergänge */
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-right: 90px; /* Verschiebe nach links */
+}
+
+/* Hover-Effekt für das Logo */
+.logo:hover {
+  transform: scale(1.1); /* Vergrößert das Logo leicht */
+  filter: brightness(1.2); /* Erhöht die Helligkeit des Logos */
 }
