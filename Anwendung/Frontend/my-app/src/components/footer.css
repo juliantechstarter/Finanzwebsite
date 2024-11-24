@@ -1,0 +1,122 @@
+/* Footer Grundlayout */
+.footer {
+  background-color: #d9d7d1; /* Heller Hintergrund */
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #222e3c;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container für die Spalten */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Footer-Spalten */
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-right: 20px;
+}
+
+.footer-column h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #1b2838; /* Dunklere Überschrift */
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  color: #495867;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-column ul li a:hover {
+  color: #1b2838; /* Dunklere Farbe beim Hover */
+}
+
+.footer-column ul li:hover {
+  color: #1b2838;
+}
+
+/* Kontaktinformationen */
+.footer-column p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Footer-Bottom-Bereich */
+.footer-bottom {
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #495867;
+}
+
+/* Links im Footer-Bottom */
+.footer-bottom a {
+  color: #1b2838;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Copyright-Text */
+.footer-bottom span {
+  margin-left: 10px;
+  color: #495867;
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+}
+
+/* Sticky Footer */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1; /* Dehnt den Hauptinhalt aus */
+}
+
+.footer {
+  flex-shrink: 0; /* Verhindert, dass der Footer schrumpft */
+}

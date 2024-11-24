@@ -1,0 +1,86 @@
+/* Allgemeines Styling */
+.geschaeftsfuehrung-container {
+  width: 100%;
+  padding: 40px;
+  background-color: #000000;
+  text-align: center;
+}
+
+/* Blauer Rahmen hinter dem Text */
+.text-container {
+  width: 130%; /* Kasten erstreckt sich über die gesamte Breite */
+  max-width: none;
+  margin: 0; /* Abstand nur unten */
+  padding: 20px 40px; /* Einheitliches Padding: 40px links/rechts */
+  background-color: #000000; /* Blauer Hintergrund */
+  text-align: left; /* Text linksbündig */
+  font-size: 0.55rem; /* Kleinere Schriftgröße */
+  line-height: 1.4;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300; /* Light für den Text */
+  color: #ffffff;
+}
+
+.text-container h1 {
+  font-size: 1.6rem; /* Kleinere Überschrift */
+  font-weight: 600; /* Bold Überschrift */
+  font-family: "Helvetica Neue", sans-serif;
+  margin-bottom: 20px;
+  
+  
+}
+
+.text-container p {
+  margin: 20px 100px;
+  margin-top: 20px; /* Abstand unterhalb der Überschrift */
+  margin-left: 0;
+  font-size: 0.8rem; /* Startet direkt unter dem H1 */
+
+}
+
+/* Fotos Styling */
+.photos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.photo-item {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 0px;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+  transform: scale(1.05);
+}
+
+.photo {
+  height: 120px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards; /* Langs. Fade-Effekt */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.photo-item p {
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
