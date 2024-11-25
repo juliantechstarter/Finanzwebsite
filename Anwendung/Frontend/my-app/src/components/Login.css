@@ -1,83 +1,71 @@
-/* Basisstruktur */
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  
 }
 
 .login-page {
+  position: relative; /* Ermöglicht absolute Platzierung der Kinder */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 100vh;
-  background-color: #f0f2f5; /* Heller Hintergrund */
+  height: 35vh; /* Optional: Vollbildhöhe */
+  
 }
 
-/* Header mit Logo */
-.login-header {
-  width: 100%;
-  background-color: #222e3c; /* Dunkelblauer Header */
-  padding: 1.5rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  max-width: 200px; /* Logo skalieren */
-  height: auto;
-}
-
-/* Login-Container */
 .login-container {
-  margin-top: 2rem;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-grow: 1;
   width: 100%;
 }
 
-/* Formular */
 .login-form {
-  background-color: #ffffff; /* Weißer Hintergrund */
+  background-color: #ffffff;
   padding: 2.5rem;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 8px; /* Abgerundete Ecken */
+  border-radius: 0px;
   width: 100%;
   max-width: 400px;
   text-align: center;
 }
 
-.form-group {
-  margin-bottom: 1.5rem;
+.form-group input {
+  padding: 1rem;
+  width: 80%; /* Reduziert die Breite, um Abstand von den Seiten zu schaffen */
+  margin: 0 auto; /* Zentriert das Input-Feld horizontal */
+  border: 1px solid #ccc;
 }
 
 .form-group input {
+  margin-bottom: 1.2rem;
+  text-align: center; /* Zentriert alle Elemente im .form-group */
   padding: 1rem;
   width: 100%;
   border: 1px solid #ccc;
-  border-radius: 5px;
   font-size: 1rem;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  position: relative; /* Ermöglicht flexible Positionierung */
+  top: 0px; /* Verschiebt das Feld nach unten */
+  left: -15px; /* Verschiebt das Feld nach rechts */
 }
 
-/* Hover und Fokus */
 .form-group input:focus {
-  border-color: #d4ac0d; /* Goldene Akzentfarbe */
+  border-color: #d4ac0d;
   box-shadow: 0px 0px 5px rgba(212, 172, 13, 0.5);
   outline: none;
 }
 
-/* Fehlernachricht */
 .error-message {
   color: #ff4d4d;
   font-weight: bold;
-  text-align: left;
   margin-bottom: 1rem;
 }
 
-/* Passwort vergessen */
 .forgot-password a {
   color: #d4ac0d;
   text-decoration: none;
@@ -89,7 +77,6 @@ body {
   color: #b58e0c;
 }
 
-/* Button */
 button[type="submit"] {
   background-color: #222e3c;
   color: white;
@@ -112,18 +99,22 @@ button[type="submit"]:active {
   transform: translateY(1px);
 }
 
-/* Responsivität */
-@media (max-width: 768px) {
-  .login-container {
-    padding: 0 1rem;
-  }
+.login-header {
+  position: absolute; /* Ermöglicht exakte Positionierung */
+  top: -50px; /* Platzierung über dem Anmeldefenster */
+  left: 50%; /* Horizontal zentriert */
+  transform: translateX(-50%); /* Exakte Zentrierung */
+  padding: 1rem; /* Optional: Abstand innen */
+  max-width: 200px; /* Breite des Logos anpassen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Die gesamte Breite einnehmen */
+  margin: 0; /* Eventuelle automatische Außenabstände entfernen */
+  padding: 0; /* Eventuelle Innenabstände entfernen */
+  box-sizing: border-box; /* Paddings und Borders berücksichtigen */
+}
+.login-header {
+  align-self: flex-start; /* Header an den Anfang verschieben */
+}
 
-  .logo {
-    max-width: 150px;
-  }
-}
-.login-wrapper {
-  border: 2px solid rgb(255, 255, 255); /* zum Testen */
-  padding: 10px;
-  margin-top: 20px;
-}

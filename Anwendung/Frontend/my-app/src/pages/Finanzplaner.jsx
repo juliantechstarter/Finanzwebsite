@@ -15,7 +15,7 @@ function Finanzplaner() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1>Ineffiziente Planung war gestern</h1>
+          <h1>Der FINAERA Finanzplaner</h1>
           <p>
             Sind Ihre Planungs-, Budgetierungs- und Forecasting-Prozesse (PB&F)
             ineffizient, inkonsistent und schleppend? Damit sind Sie nicht
