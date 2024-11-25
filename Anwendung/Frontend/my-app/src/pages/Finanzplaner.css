@@ -48,29 +48,68 @@
 .login-wrapper {
   display: flex;
   justify-content: center; /* Zentriert Login-Formular horizontal */
-  align-items: center;
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #ffffff; /* Weißer Hintergrund */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
-  border-radius: 10px;
-  max-width: 600px; /* Begrenzte Breite für den Login-Bereich */
-  margin: 20px auto; /* Zentriert den Bereich auf der Seite */
+  align-items: center; /* Zentriert Login-Formular vertikal */
+  margin: 40px auto; /* Mehr Abstand zum Rest des Inhalts und mittig auf der Seite */
+  padding: 0; /* Entferne unnötiges Padding */
+  max-width: 400px; /* Begrenze die Breite des Login-Bereichs */
+  width: 100%; /* Breite auf 100% setzen, damit der Login-Bereich auf Mobilgeräten besser skaliert */
+  box-sizing: border-box; /* Box-Model verwenden, um die Gesamtbreite besser zu kontrollieren */
 }
 
-/* Styling für kleinere Bildschirme */
+/* Container für das Login-Formular */
+.login-container {
+  width: 100%; /* Vollbreite innerhalb des Wrappers */
+  max-width: 400px; /* Begrenzung der maximalen Breite auf 400px für bessere Übersicht */
+  padding: 2rem; /* Mehr Padding für eine luftige Darstellung */
+  border: 1px solid #ddd; /* Dezenterer Rand für ein moderneres Aussehen */
+  border-radius: 10px; /* Runde Ecken für ein weicheres Erscheinungsbild */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Tieferer Schatten für mehr Tiefe und Dimension */
+  background-color: #ffffff;
+}
+
+/* Zusätzliche Anpassungen für den Button und den Text */
+.login-form button {
+  background-color: #333333; /* Dunklere Farbe für den Button */
+  color: #fff; /* Weißer Text für besseren Kontrast */
+  border: none;
+  padding: 0.75rem 1rem; /* Mehr Padding für eine bessere Haptik */
+  border-radius: 5px; /* Runde Ecken für ein freundlicheres Erscheinungsbild */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s; /* Sanfter Übergang beim Hover-Effekt */
+}
+
+.login-form button:hover {
+  background-color: #555555; /* Hellere Farbe bei Hover, um Interaktivität anzuzeigen */
+}
+
+/* Styling für den Link "Kennwort vergessen?" */
+.login-form .forgot-password {
+  text-align: right;
+  margin-bottom: 1rem;
+  color: #ffb700; /* Gelber Farbton, um zum Corporate Design zu passen */
+}
+
+/* Styling für die Fehlernachricht */
+.login-form .error-message {
+  color: #d9534f; /* Rote Farbe für deutliche Fehlermeldungen */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Anpassungen für mobile Geräte */
 @media (max-width: 768px) {
   .content-wrapper {
-    flex-direction: column; /* Stapelt Text und Bild vertikal */
+    flex-direction: column; /* Stapelt Text und Bild vertikal für eine bessere Darstellung auf kleineren Bildschirmen */
     text-align: center;
   }
 
   .text-section {
-    padding-right: 0;
+    padding-right: 0; /* Entferne Padding, um auf kleinen Geräten besser auszusehen */
     max-width: 100%;
   }
 
   .login-wrapper {
-    max-width: 90%;
+    max-width: 90%; /* Auf mobilen Geräten etwas mehr Platz nutzen, damit der Login-Block nicht zu schmal wird */
   }
 }
