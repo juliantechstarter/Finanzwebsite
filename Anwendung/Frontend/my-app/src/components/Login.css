@@ -70,12 +70,13 @@ body {
 .forgot-password a {
   color: #d4ac0d;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: light;
 }
 
 .forgot-password a:hover {
   text-decoration: underline;
   color: #b58e0c;
+    text-decoration: none; /* Keine Unterstreichung im Hover-Zustand */
 }
 
 button[type="submit"] {

@@ -1,0 +1,29 @@
+.umbuchungen-container {
+  background-color: #f9f0ff;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.umbuchungen-container form div {
+  margin-bottom: 1rem;
+}
+
+.umbuchungen-container label {
+  display: block;
+  font-weight: bold;
+}
+
+.umbuchungen-container input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.umbuchungen-container button {
+  padding: 0.5rem 1rem;
+  background-color: #722ed1;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

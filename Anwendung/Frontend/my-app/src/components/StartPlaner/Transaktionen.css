@@ -1,0 +1,15 @@
+.transaktionen-container {
+  background-color: #fffbe6;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.transaktionen-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transaktionen-container li {
+  margin: 0.5rem 0;
+  color: #333;
+}

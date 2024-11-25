@@ -10,15 +10,28 @@ import './StartPlaner.css';
 function StartPlaner() {
   const [currentView, setCurrentView] = useState('finanzanalyse');
 
+  // Navigationselemente für die Sidebar
+  const navItems = [
+    { id: 'finanzanalyse', label: 'Finanzanalyse' },
+    { id: 'transaktionen', label: 'Transaktionen' },
+    { id: 'dauerauftraege', label: 'Daueraufträge' },
+    { id: 'umbuchungen', label: 'Umbuchungen' },
+    // Weitere Navigationselemente hier hinzufügen
+  ];
+
   return (
     <div className="startplaner-container">
       <nav className="sidebar">
         <ul>
-          <li onClick={() => setCurrentView('finanzanalyse')}>Finanzanalyse</li>
-          <li onClick={() => setCurrentView('transaktionen')}>Transaktionen</li>
-          <li onClick={() => setCurrentView('dauerauftraege')}>Daueraufträge</li>
-          <li onClick={() => setCurrentView('umbuchungen')}>Umbuchungen</li>
-          {/* Weitere Navigationselemente */}
+          {navItems.map((item) => (
+            <li
+              key={item.id}
+              className={currentView === item.id ? 'active' : ''}
+              onClick={() => setCurrentView(item.id)}
+            >
+              {item.label}
+            </li>
+          ))}
         </ul>
       </nav>
       <main className="main-content">

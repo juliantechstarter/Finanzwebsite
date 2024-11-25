@@ -1,0 +1,15 @@
+.dauerauftraege-container {
+  background-color: #e6f7ff;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.dauerauftraege-container ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.dauerauftraege-container li {
+  margin: 0.5rem 0;
+  color: #0073e6;
+}

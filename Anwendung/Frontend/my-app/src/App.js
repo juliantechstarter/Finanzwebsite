@@ -1,4 +1,3 @@
-/// Datei: App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -15,71 +14,14 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Route für Landing Page */}
         <Route path="/" element={<Start />} />
-
-        {/* Routen für die Seiten mit Navbar und Footer */}
-        <Route
-          path="/home"
-          element={
-            <>
-              <Navbar />
-              <Home />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/finanzplaner"
-          element={
-            <>
-              <Navbar />
-              <Finanzplaner />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/finanznews"
-          element={
-            <>
-              <Navbar />
-              <Finanznews />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/unternehmen"
-          element={
-            <>
-              <Navbar />
-              <Unternehmen />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/geschäftsführung"
-          element={
-            <>
-              <Navbar />
-              <Geschaeftsfuehrung />
-              <Footer />
-            </>
-          }
-        />
-        {/* StartPlaner Route hinzufügen */}
-        <Route
-          path="/startplaner"
-          element={
-            <>
-              <Navbar />
-              <StartPlaner />
-              <Footer />
-            </>
-          }
-        />
+        <Route path="/home" element={<><Navbar /><Home /><Footer /></>} />
+        <Route path="/finanzplaner" element={<><Navbar /><Finanzplaner /><Footer /></>} />
+        <Route path="/finanznews" element={<><Navbar /><Finanznews /><Footer /></>} />
+        <Route path="/unternehmen" element={<><Navbar /><Unternehmen /><Footer /></>} />
+        <Route path="/geschäftsführung" element={<><Navbar /><Geschaeftsfuehrung /><Footer /></>} />
+        {/* StartPlaner Route */}
+        <Route path="/startplaner" element={<><Navbar /><StartPlaner /><Footer /></>} />
       </Routes>
     </Router>
   );
