@@ -1,22 +1,24 @@
-const express = require('express');
-const transactionRoutes = require('./src/routes/transactions');
-const connectDB = require('./config/db');
-
+// src/app.js
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const authRoutes = require("./routes/authRoutes");
+const accountRoutes = require("./routes/accountRoutes");
+const budgetRoutes = require("./routes/budgetRoutes");
+const analyticsRoutes = require("./routes/analyticsRoutes");
+const transactionRoutes = require('./routes/transactionRoutes');
 const app = express();
 
-// Middleware: JSON body parser
-app.use(express.json());
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
 
-// Verbindet die DB mit AWS RDS
-connectDB();
-
-// Setzt die Routen
+// Routes
+app.use("/auth", authRoutes);
+app.use("/accounts", accountRoutes);
+app.use("/budgets", budgetRoutes);
+app.use("/analytics", analyticsRoutes);
 app.use('/transactions', transactionRoutes);
+app.use('/api/plaid', require('./routes/plaidRoutes'));
 
-// Error Handler (optional, aber empfehlenswert)
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ message: 'Etwas ist schiefgelaufen!' });
-});
-
-module.exports = app;
+module.exports = app; // Exportiere die App für Tests und den Serverstart

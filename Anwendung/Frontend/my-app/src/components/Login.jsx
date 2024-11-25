@@ -27,38 +27,37 @@ function Login() {
     console.log('Passwort:', password);
   };
 
- 
-      {/* Login-Formular */}
-      <main className="login-container">
-        <form className="login-form" onSubmit={handleLogin}>
-          {error && <p className="error-message">{error}</p>}
-          <div className="form-group">
-            <input
-              type="email"
-              id="email"
-              placeholder="E-Mail"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="password"
-              id="password"
-              placeholder="Kennwort"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <div className="forgot-password">
-            <a href="#">Kennwort vergessen?</a>
-          </div>
-          <button type="submit">➜ Anmelden</button>
-        </form>
-      </main>
-  ;
+  return (
+    <main className="login-container">
+      <form className="login-form" onSubmit={handleLogin}>
+        {error && <p className="error-message">{error}</p>}
+        <div className="form-group">
+          <input
+            type="email"
+            id="email"
+            placeholder="E-Mail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="password"
+            id="password"
+            placeholder="Kennwort"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <div className="forgot-password">
+          <a href="#">Kennwort vergessen?</a>
+        </div>
+        <button type="submit">➜ Anmelden</button>
+      </form>
+    </main>
+  );
 }
 
 export default Login;
