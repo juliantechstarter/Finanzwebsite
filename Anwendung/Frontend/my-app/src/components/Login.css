@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
   background-color: #f0f2f5;
+ 
   
 }
 
@@ -13,8 +14,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 35vh; /* Optional: Vollbildhöhe */
-  
+  height: 28vh; /* Optional: Vollbildhöhe */
+
 }
 
 .login-container {
@@ -101,7 +102,7 @@ button[type="submit"]:active {
 
 .login-header {
   position: absolute; /* Ermöglicht exakte Positionierung */
-  top: -50px; /* Platzierung über dem Anmeldefenster */
+  top: -80px; /* Platzierung über dem Anmeldefenster */
   left: 50%; /* Horizontal zentriert */
   transform: translateX(-50%); /* Exakte Zentrierung */
   padding: 1rem; /* Optional: Abstand innen */
@@ -109,7 +110,7 @@ button[type="submit"]:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Die gesamte Breite einnehmen */
+  img { max-width: 257%; height: auto; }
   margin: 0; /* Eventuelle automatische Außenabstände entfernen */
   padding: 0; /* Eventuelle Innenabstände entfernen */
   box-sizing: border-box; /* Paddings und Borders berücksichtigen */

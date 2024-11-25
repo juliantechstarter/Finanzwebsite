@@ -3,68 +3,28 @@
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-}
-
-/* Wrapper für Text und Bild */
-.content-wrapper {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 40px;
-  background-color: #ffffff;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Textbereich links */
-.text-section {
-  max-width: 50%;
-  padding-right: 20px;
-}
-
-.text-section h1 {
-  font-size: 2rem;
-  color: #000;
-  margin-bottom: 10px;
-  font-weight: 600; /* Medium Schriftstil */
-}
-
-.text-section p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-  font-weight: 300; /* Light Schriftstil */
-}
-
-/* Bildbereich rechts */
-.image-section img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border: none;
+  min-height: 100vh; /* Die Seite nimmt die gesamte Bildschirmhöhe ein */
+  background-image: url('../components/fpbg.png'); /* Hintergrundbild */
+  background-size: cover; /* Hintergrundbild soll den gesamten Bereich abdecken */
+  background-position: center; /* Bild zentrieren */
+  background-repeat: no-repeat; /* Verhindert Wiederholung des Bildes */
 }
 
 /* Wrapper für das Login-Formular */
 .login-wrapper {
   display: flex;
-  justify-content: center; /* Zentriert Login-Formular horizontal */
-  align-items: center; /* Zentriert Login-Formular vertikal */
-  margin: 40px auto; /* Mehr Abstand zum Rest des Inhalts und mittig auf der Seite */
-  padding: 0; /* Entferne unnötiges Padding */
-  max-width: 400px; /* Begrenze die Breite des Login-Bereichs */
-  width: 100%; /* Breite auf 100% setzen, damit der Login-Bereich auf Mobilgeräten besser skaliert */
-  box-sizing: border-box; /* Box-Model verwenden, um die Gesamtbreite besser zu kontrollieren */
-}
-
-/* Container für das Login-Formular */
-.login-container {
-  width: 100%; /* Vollbreite innerhalb des Wrappers */
-  max-width: 400px; /* Begrenzung der maximalen Breite auf 400px für bessere Übersicht */
-  padding: 2rem; /* Mehr Padding für eine luftige Darstellung */
-  border: 1px solid #ddd; /* Dezenterer Rand für ein moderneres Aussehen */
-  border-radius: 10px; /* Runde Ecken für ein weicheres Erscheinungsbild */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Tieferer Schatten für mehr Tiefe und Dimension */
-  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9); /* Weißer Hintergrund mit leichter Transparenz */
+  border-radius: 10px; /* Runde Ecken */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sanfter Schatten für Dimension */
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box; /* Box-Modell für besseren Umgang mit Breite/Padding */
 }
 
 /* Zusätzliche Anpassungen für den Button und den Text */
@@ -87,7 +47,8 @@
 .login-form .forgot-password {
   text-align: right;
   margin-bottom: 1rem;
-  color: #ffb700; /* Gelber Farbton, um zum Corporate Design zu passen */
+  color: #007bff; /* Blaue Farbe für einen klassischen Link-Look */
+  text-decoration: underline;
 }
 
 /* Styling für die Fehlernachricht */
@@ -99,16 +60,6 @@
 
 /* Anpassungen für mobile Geräte */
 @media (max-width: 768px) {
-  .content-wrapper {
-    flex-direction: column; /* Stapelt Text und Bild vertikal für eine bessere Darstellung auf kleineren Bildschirmen */
-    text-align: center;
-  }
-
-  .text-section {
-    padding-right: 0; /* Entferne Padding, um auf kleinen Geräten besser auszusehen */
-    max-width: 100%;
-  }
-
   .login-wrapper {
     max-width: 90%; /* Auf mobilen Geräten etwas mehr Platz nutzen, damit der Login-Block nicht zu schmal wird */
   }
