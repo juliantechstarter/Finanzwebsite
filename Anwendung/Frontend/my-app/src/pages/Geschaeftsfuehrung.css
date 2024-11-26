@@ -1,75 +1,81 @@
 /* Allgemeines Styling */
 .geschaeftsfuehrung-container {
   width: 100%;
-  padding: 40px;
+  padding: 60px;
   background-color: #ffffff;
   text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Blauer Rahmen hinter dem Text */
-.text-container {
-  width: 130%; /* Kasten erstreckt sich über die gesamte Breite */
-  max-width: none;
-  margin: 0; /* Abstand nur unten */
-  padding: 20px 40px; /* Einheitliches Padding: 40px links/rechts */
-  background-color: #000000; /* Blauer Hintergrund */
-  text-align: left; /* Text linksbündig */
-  font-size: 0.55rem; /* Kleinere Schriftgröße */
-  line-height: 1.4;
-  font-family: "Helvetica Neue", sans-serif;
-  font-weight: 300; /* Light für den Text */
-  color: #ffffff;
+/* Freier Bereich unter der Navbar */
+.spacer {
+  height: 40px;
 }
 
-.text-container h1 {
-  font-size: 1.6rem; /* Kleinere Überschrift */
-  font-weight: 600; /* Bold Überschrift */
-  font-family: "Helvetica Neue", sans-serif;
-  margin-bottom: 20px;
-  
-  
+/* Schriftarten */
+.signature-font {
+  font-family: 'Brittany Signature', cursive;
+  font-size: 3rem;
+  margin-bottom: 1px;
+  margin-top: 100px;
+  opacity: 0; /* Start transparent */
+  animation: fadeInSlideDown 2s ease-in-out forwards;
 }
 
-.text-container p {
-  margin: 20px 100px;
-  margin-top: 20px; /* Abstand unterhalb der Überschrift */
-  margin-left: 0;
-  font-size: 0.8rem; /* Startet direkt unter dem H1 */
-
+.title-font {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 4rem;
+  font-weight: 450;
+  margin-bottom: 75px;
+  opacity: 0; /* Start transparent */
+  animation: fadeIn 2.5s ease-in-out forwards;
+  animation-delay: 0.5s; /* Verzögerung */
 }
 
 /* Fotos Styling */
 .photos-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin-top: 20px;
+  gap: 90px;
+  margin-top: 30px;
+  opacity: 0; /* Start transparent */
+  animation: fadeIn 3s ease-in-out forwards;
+  animation-delay: 1s; /* Verzögerung */
 }
 
 .photo-item {
-  text-align: center;
-  background-color: #ffffff;
-  padding: 0px;
-  border-radius: 0px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 150px;
-  transition: transform 0.3s ease;
-}
-
-.photo-item:hover {
-  transform: scale(1.05);
+  text-align: left;
+  max-width: 450px;
+  transform: translateY(30px); /* Start weiter unten */
+  opacity: 0;
+  animation: fadeInSlideUp 2s ease-in-out forwards;
 }
 
 .photo {
-  height: 120px;
-  width: auto;
-  display: block;
-  margin: 0 auto;
-  opacity: 0;
-  animation: fadeIn 3s ease forwards; /* Langs. Fade-Effekt */
+  width: 90%;
+  height: auto;
+  border-radius: 0px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+.photo-item h3 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 22.5px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.photo-item p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 10px;
+  line-height: 1.1;
+}
+
+/* Keyframes für Fade-Effekte */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -79,8 +85,24 @@
   }
 }
 
-.photo-item p {
-  font-size: 0.85rem;
-  font-weight: 400;
-  margin-top: 8px;
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

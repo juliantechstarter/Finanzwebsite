@@ -7,33 +7,40 @@ import marcel from '../assets/marcel.png';
 function Geschaeftsfuehrung() {
   return (
     <div className="geschaeftsfuehrung-container">
-      {/* Blauer Rahmen hinter dem Text */}
-      <div className="text-container">
-        <h1>Gemeinsam vorangehen: Die Geschäftsleitung von Finaera</h1>
-        <p>
-          Gemeinsam mit dem Team der Mönchengladbacher ServiceZentrale schafft unsere Geschäftsleitung<br></br> 
-          optimale Rahmenbedingungen für unsere selbstständigen Beraterinnen und Berater. Sie <br></br>
-          sorgen für passende Softwarelösungen, fundierte Aus- und Weiterbildung und stellen die <br></br>
-          kompetente Unterstützung bei Fach- und Produktfragen sicher. Alles für eine optimale <br></br>
-          Beratung im Sinne unserer Kundinnen und Kunden – ohne Vertriebsdruck oder Umsatzvorgaben.
-        </p>
-      </div>
+      {/* Freier Bereich unter der Navbar */}
+      <div className="spacer"></div>
 
-      {/* Fotos mit langsamerem Fade-In Effekt */}
+      {/* Überschrift */}
+      <h2 className="signature-font">Gemeinsam vorangehen</h2>
+      <h1 className="title-font">DIE GESCHÄFTSFÜHRUNG VON FINAERA</h1>
+
+      {/* Fotos der Geschäftsführung */}
       <div className="photos-container">
         <div className="photo-item">
-          <img src={merlin} alt="Dr. Merlin Hellbach" className="photo" />
-          <p>Dr. Merlin Hellbach</p>
+          <img src={merlin} alt="Merlin Hellbach" className="photo" />
+          <h3>DR. MERLIN HELLBACH</h3>
+          <p>
+            Spezialist für robuste Backend-Lösungen und 
+            datengesteuerte Systeme. Merlin sorgt für eine reibungslose Funktionalität hinter den Kulissen.
+          </p>
         </div>
         <div className="photo-item">
           <img src={julian} alt="Julian Sänger" className="photo" />
-          <p>Julian Sänger</p>
+          <h3>JULIAN SÄNGER</h3>
+          <p>
+            Kreativer Frontend-Entwickler mit einem Auge für Benutzerfreundlichkeit und modernes Design. Julian bringt Ideen optisch zum Leben.
+          </p>
         </div>
         <div className="photo-item">
           <img src={marcel} alt="Marcel Ebel" className="photo" />
-          <p>Marcel Ebel</p>
+          <h3>MARCEL EBEL</h3>
+          <p>
+            Versiert in Textgestaltung und Präsentation. Marcel kombiniert Kommunikationsgeschick mit ersten Erfahrungen im Frontend-Development.
+          </p>
         </div>
       </div>
+      <div className="spacer"></div>
+      <div className="spacer"></div>
     </div>
   );
 }
