@@ -41,8 +41,8 @@ function Home() {
         >
           <h1>Finanzberatung – so einzigartig wie Ihr Leben</h1>
           <p>
-            Der Zukunft entspannt entgegengehen: Mit einer guten Finanzplanung
-            können Sie Vermögen aufbauen, finanzielle Spielräume für das Alter
+          <p> Der Zukunft entspannt entgegengehen: Mit einer guten Finanzplanung</p>
+          <p> können Sie Vermögen aufbauen, finanzielle Spielräume für das Alter</p>
             schaffen und sich auf unerwartete Herausforderungen vorbereiten.
           </p>
         </motion.div>

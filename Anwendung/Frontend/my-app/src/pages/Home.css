@@ -23,11 +23,13 @@
   font-size: 2.5rem;
   margin-bottom: 15px;
   color: #333;
+  font-weight: 600;
 }
 
 .hero-text p {
   font-size: 1.2rem;
   color: #666;
+  line-height: 1,2;
 }
 
 .hero-image {
@@ -46,6 +48,7 @@
   font-size: 2rem;
   margin-bottom: 20px;
   color: #333;
+  font-weight: 600;
 }
 
 .content-cards {
@@ -56,7 +59,7 @@
 
 .card {
   width: 300px;
-  background: #f9f9f9;
+  background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 0px;
   padding: 15px;
