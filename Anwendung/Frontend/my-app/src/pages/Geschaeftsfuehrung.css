@@ -16,10 +16,12 @@
 .signature-font {
   font-family: 'Brittany Signature', cursive;
   font-size: 3rem;
-  margin-bottom: 1px;
+  margin-bottom: -5px;
   margin-top: 100px;
   opacity: 0; /* Start transparent */
   animation: fadeInSlideDown 2s ease-in-out forwards;
+  text-align: center;
+  margin-left: -50px;
 }
 
 .title-font {
@@ -27,6 +29,7 @@
   font-size: 4rem;
   font-weight: 450;
   margin-bottom: 75px;
+  margin-top: 0px;
   opacity: 0; /* Start transparent */
   animation: fadeIn 2.5s ease-in-out forwards;
   animation-delay: 0.5s; /* Verzögerung */
