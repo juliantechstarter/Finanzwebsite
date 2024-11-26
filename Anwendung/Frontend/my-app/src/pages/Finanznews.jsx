@@ -33,12 +33,14 @@ function Finanznews() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1>Finanznews</h1>
-          <p>
-            Sie möchten tiefer in ein bestimmtes Finanzthema eintauchen? Hier
-            finden Sie wertvolle Beiträge, die Ihnen hilfreiches Wissen und
-            spannende Hintergründe liefern.
-          </p>
+          <h1>FINANZNEWS</h1>
+          <h4>Sie möchten tiefer in ein bestimmtes Finanzthema eintauchen? </h4>
+          <p>Hier finden Sie wertvolle Beiträge, die Ihnen hilfreiches Wissen und spannende Hintergründe rund</p>
+          <p>um die Welt der Finanzen liefern. Ob Sie sich für Marktanalysen, Investmentstrategien oder</p>
+          <p>wirtschaftliche Trends interessieren – bei uns bleiben Sie bestens informiert.</p>
+          <br />
+          <p>Darunter präsentieren wir Ihnen die aktuellsten Finanznews, die in Echtzeit aktualisiert werden,</p>
+          <p>sodass Sie keine wichtigen Entwicklungen verpassen. Bleiben Sie immer einen Schritt voraus!</p>
         </motion.div>
 
         {/* Bild-Sektion mit Fade-In von oben */}
@@ -54,7 +56,7 @@ function Finanznews() {
 
       {/* Bereich für Finanznews-Artikel */}
       <div className="news-section">
-        <h2>Aktuelle Finanznachrichten</h2>
+       
         <div className="news-list">
           {articles.length > 0 ? (
             articles.map((article, index) => (

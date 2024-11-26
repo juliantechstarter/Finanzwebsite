@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 80px;
-  background-color: #ffffff;
+  background-color: #e8e4e1;
   width: 100%;
   box-sizing: border-box;
 }
@@ -24,44 +24,64 @@
 
 .text-section h1 {
   font-family: 'Helvetica Neue Med', sans-serif;
-  font-size: 24px; /* Feste Schriftgröße */
+  font-size: 55px; /* Feste Schriftgröße */
   color: #000;
   margin-bottom: 10px;
+  font-weight: 600;
+  margin-left: 30px;
 }
 
-.text-section p {
-  font-size: 16px; /* Feste Schriftgröße */
+.text-section h4 {
+  font-size: 21px; /* Feste Schriftgröße */
   color: #333;
-  line-height: 1.6;
+  margin-left: 30px;
+  line-height: 10px;
+  font-weight: 800;
+  margin-top: 30px;
 }
-
+.text-section p {
+  font-size: 19px; /* Feste Schriftgröße */
+  color: #333;
+  margin-left: 30px;
+  line-height: 10px;
+  margin-top: 10px;
+}
+ 
 /* Bildbereich rechts */
 .image-section img {
   max-width: 100%;
   height: auto;
   display: block;
   border: none;
+  margin-top: -30px;
 }
 
 /* Neuer Bereich für Finanznews */
 .news-section {
   padding: 20px 40px;
-  background-color: #f5f5f5;
-  margin-top: 20px;
+  background-color: #e8e4e1;
+  
 }
 
 .news-section h2 {
-  font-size: 20px; /* Feste Schriftgröße */
+  font-size: 0px; /* Feste Schriftgröße */
   color: #000;
   margin-bottom: 20px;
+  text-align: center;
+  font-weight: 300;
+  
 }
 
-/* News-Artikel-Container */
 .news-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* Maximal 4 Spalten */
   gap: 20px;
+  justify-content: center; /* Zentriert die Blöcke horizontal */
+  width: 100%;
+  max-width: 1200px; /* Optional: Begrenze die Gesamtbreite */
+  margin: 0 auto; /* Zentriere das Grid innerhalb der Seite */
 }
+
 
 /* Styling für die Artikelkarten */
 .news-item {
