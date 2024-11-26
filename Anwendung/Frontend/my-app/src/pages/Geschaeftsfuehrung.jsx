@@ -18,7 +18,7 @@ function Geschaeftsfuehrung() {
       <div className="photos-container">
         <div className="photo-item">
           <img src={merlin} alt="Merlin Hellbach" className="photo" />
-          <h3>MERLIN HELLBACH</h3>
+          <h3>DR. MERLIN HELLBACH</h3>
           <p>
             Spezialist für robuste Backend-Lösungen und 
             datengesteuerte Systeme. Merlin sorgt für eine reibungslose Funktionalität hinter den Kulissen.
