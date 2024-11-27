@@ -9,49 +9,48 @@ import fensterImage from '../assets/fenster.png'; // Zweites rechtes Bild
 function Unternehmen() {
   return (
     <div className="unternehmen-page">
-      {/* Hero Section */}
+      {/* Freier Bereich unter der Navbar */}
+      <div className="spacer"></div>
+
+      {/* Überschrift */}
+      <h2 className="signature-font">Gemeinsam Werte schaffen</h2>
+      <h1 className="title-font">DAS UNTERNEHMEN FINAERA</h1>
+
+      {/* Hero-Bereich */}
       <div className="hero-section">
         <img src={recepImage} alt="Hauptbild des Unternehmens" className="hero-image" />
-        <div className="hero-text">
-          <h1>Unser Unternehmen</h1>
-          <p>
-            Willkommen bei FINAERA – Ihrem verlässlichen Partner für innovative Finanzberatung. Unsere Unternehmensstruktur ist so
-            gestaltet, dass sie nachhaltigen Erfolg und langfristige Unabhängigkeit gewährleistet.
-          </p>
-        </div>
+        <p className="hero-caption">
+          Willkommen bei FINAERA – Ihrem verlässlichen Partner für innovative Finanzberatung. Unsere Struktur ist so gestaltet,
+          dass sie nachhaltigen Erfolg und langfristige Unabhängigkeit gewährleistet.
+        </p>
       </div>
 
-      {/* Content Section */}
+      {/* Werte-Sektion */}
       <div className="content-section">
-        <div className="text-block">
-          <h2>Unsere Werte</h2>
-          <p>
-            FINAERA ist mehr als nur ein Finanzunternehmen. Wir glauben an Unabhängigkeit, Transparenz und langfristige Partnerschaften.
-            Unsere Beraterinnen und Berater sind nicht nur Teil unseres Teams, sondern auch Gesellschafter, die die Entwicklung
-            des Unternehmens aktiv mitgestalten.
-          </p>
-        </div>
+        <h2 className="content-title">Unsere Werte</h2>
+        <p className="content-description">
+          FINAERA ist mehr als nur ein Finanzunternehmen. Wir glauben an Unabhängigkeit, Transparenz und langfristige Partnerschaften.
+          Unsere Beraterinnen und Berater sind nicht nur Teil unseres Teams, sondern auch Gesellschafter, die die Entwicklung
+          des Unternehmens aktiv mitgestalten.
+        </p>
 
-        <div className="image-gallery">
-          <div className="image-row">
-            <div className="image-item">
-              <img src={hausImage} alt="Außenansicht des Unternehmensgebäudes" />
-              <p>Unsere Hauptzentrale – ein Symbol für Beständigkeit und Fortschritt.</p>
-            </div>
-            <div className="image-item">
-              <img src={deckeImage} alt="Moderne Innenarchitektur" />
-              <p>Einblicke in unsere modernen Arbeitsräume.</p>
-            </div>
+        {/* Galerie */}
+        <div className="photos-container">
+          <div className="photo-item">
+            <img src={hausImage} alt="Außenansicht des Unternehmensgebäudes" className="photo" />
+            <p>Unsere Hauptzentrale – ein Symbol für Beständigkeit und Fortschritt.</p>
           </div>
-          <div className="image-row">
-            <div className="image-item">
-              <img src={loungeImage} alt="Lounge-Bereich" />
-              <p>Einladende Lounge-Bereiche für Meetings und Zusammenarbeit.</p>
-            </div>
-            <div className="image-item">
-              <img src={fensterImage} alt="Helle Arbeitsumgebung" />
-              <p>Offene und lichtdurchflutete Büros für maximale Produktivität.</p>
-            </div>
+          <div className="photo-item">
+            <img src={deckeImage} alt="Moderne Innenarchitektur" className="photo" />
+            <p>Einblicke in unsere modernen Arbeitsräume.</p>
+          </div>
+          <div className="photo-item">
+            <img src={loungeImage} alt="Lounge-Bereich" className="photo" />
+            <p>Einladende Lounge-Bereiche für Meetings und Zusammenarbeit.</p>
+          </div>
+          <div className="photo-item">
+            <img src={fensterImage} alt="Helle Arbeitsumgebung" className="photo" />
+            <p>Offene und lichtdurchflutete Büros für maximale Produktivität.</p>
           </div>
         </div>
       </div>

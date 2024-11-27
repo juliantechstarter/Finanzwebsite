@@ -1,95 +1,122 @@
 /* Allgemeines Styling */
 .unternehmen-page {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #e8e4e1;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Hero Section */
-.hero-section {
-  position: relative;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.hero-image {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  filter: brightness(70%);
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.hero-text h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
+  padding: 60px;
+  background-color: #f5f5f5;
+  text-align: center;
   animation: fadeIn 1.5s ease-in-out;
 }
 
-.hero-text p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto;
-  animation: fadeInSlideUp 2s ease-in-out;
+/* Freier Bereich unter der Navbar */
+.spacer {
+  height: 40px;
 }
 
-/* Content Section */
-.content-section {
-  padding: 40px 80px;
-}
-
-.text-block h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.text-block p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-}
-
-/* Image Gallery */
-.image-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.image-row {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.image-item {
-  flex: 1;
-  max-width: 45%;
+/* Schriftarten */
+.signature-font {
+  font-family: 'Brittany Signature', cursive;
+  font-size: 3rem;
+  margin-bottom: -5px;
+  margin-top: 100px;
+  opacity: 0; /* Start transparent */
+  animation: fadeInSlideDown 2s ease-in-out forwards;
   text-align: center;
+  margin-left: -50px;
 }
 
-.image-item img {
-  width: 100%;
+.title-font {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 4rem;
+  font-weight: 450;
+  margin-bottom: 75px;
+  margin-top: 0px;
+  opacity: 0; /* Start transparent */
+  animation: fadeIn 2.5s ease-in-out forwards;
+  animation-delay: 0.5s; /* Verzögerung */
+}
+
+/* Hero-Bereich */
+.hero-section {
+  margin-top: 50px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-image {
+  width: 60%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  clip-path: inset(5% 0 5% 0); /* 10% oben und unten zuschneiden */
 }
 
-.image-item p {
-  font-size: 1rem;
+.hero-caption {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Werte-Sektion */
+.content-section {
+  margin-top: 60px;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.content-title {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.content-description {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 50px;
+  line-height: 1.6;
   color: #555;
 }
 
-/* Animation Keyframes */
+/* Galerie */
+.photos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.photo-item {
+  text-align: center;
+  max-width: 300px;
+  transform: translateY(30px); /* Start weiter unten */
+  opacity: 0;
+  animation: fadeInSlideUp 2s ease-in-out forwards;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.photo-item p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 15px;
+  line-height: 1.4;
+  color: #444;
+}
+
+/* Keyframes für Animationen */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -103,6 +130,17 @@
   from {
     opacity: 0;
     transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
   }
   to {
     opacity: 1;
