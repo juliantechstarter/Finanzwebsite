@@ -1,149 +1,81 @@
-/* Allgemeines Styling */
 .unternehmen-page {
-  width: 100%;
-  padding: 60px;
-  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  background-color: #e8e4e1;
+  color: #000000;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* Obere Sektion */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.header-text {
   text-align: center;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Freier Bereich unter der Navbar */
-.spacer {
-  height: 40px;
-}
-
-/* Schriftarten */
 .signature-font {
   font-family: 'Brittany Signature', cursive;
-  font-size: 3rem;
-  margin-bottom: -5px;
-  margin-top: 100px;
-  opacity: 0; /* Start transparent */
-  animation: fadeInSlideDown 2s ease-in-out forwards;
-  text-align: center;
-  margin-left: -50px;
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 5px;
+  margin-left: 10px;
 }
 
 .title-font {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 4rem;
-  font-weight: 450;
-  margin-bottom: 75px;
-  margin-top: 0px;
-  opacity: 0; /* Start transparent */
-  animation: fadeIn 2.5s ease-in-out forwards;
-  animation-delay: 0.5s; /* Verzögerung */
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  white-space: nowrap;  /* Verhindert Umbrüche */
+  margin-left: 100px;
 }
 
-/* Hero-Bereich */
-.hero-section {
-  margin-top: 50px;
-  text-align: center;
-  animation: fadeIn 2s ease-in-out;
-}
 
-.hero-image {
-  width: 60%;
+.header-image img {
+  width: 70%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  clip-path: inset(5% 0 5% 0); /* 10% oben und unten zuschneiden */
+  object-fit: cover;
+  margin-left: 25%;
+  margin-top: 30px;
+  clip-path: inset(20px 0px 20px 0px);
 }
 
-.hero-caption {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 300;
+/* Mittlere Sektion */
+.middle-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Galerie links, Text rechts */
+  gap: 5%;
+}
+
+.gallery {
+  display: flex; /* Horizontal nebeneinander */
+  gap: 5px;
+  margin-left: 40px;
+}
+
+.gallery img {
+  width: 350px; /* Einheitliche Breite */
+  height: auto;
+  object-fit: cover;
+  margin-left: 50px;
+}
+
+.text-section {
+  line-height: 1.8;
+  margin-left: 10%;
+}
+
+.text-section h3 {
+  font-size: 1.5rem;
   margin-top: 20px;
-  line-height: 1.6;
-  color: #333;
+  color: #000;
 }
 
-/* Werte-Sektion */
-.content-section {
-  margin-top: 60px;
-  animation: fadeIn 3s ease-in-out;
-}
-
-.content-title {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-
-.content-description {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-bottom: 50px;
-  line-height: 1.6;
-  color: #555;
-}
-
-/* Galerie */
-.photos-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  opacity: 0;
-  animation: fadeIn 3s ease-in-out forwards;
-  animation-delay: 1s;
-}
-
-.photo-item {
-  text-align: center;
-  max-width: 300px;
-  transform: translateY(30px); /* Start weiter unten */
-  opacity: 0;
-  animation: fadeInSlideUp 2s ease-in-out forwards;
-}
-
-.photo {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.photo-item p {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  margin-top: 15px;
-  line-height: 1.4;
-  color: #444;
-}
-
-/* Keyframes für Animationen */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInSlideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.text-section p {
+  margin: 10px 0 0;
+  color: #000000;
 }
