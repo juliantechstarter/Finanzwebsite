@@ -30,31 +30,35 @@ function Home() {
   ];
 
   return (
-    <div className="home-container">
+    <>
       {/* Hero Section */}
-      <section className="hero-section">
+      <div className="home-container">
+        {/* Textbereich mit Slide-In von links */}
         <motion.div
-          className="hero-text"
+          className="text-block"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1>Finanzberatung – so einzigartig wie Ihr Leben</h1>
+          <h1>FINANZBERATUNG </h1>
+           <h4>so einzigartig wie Ihr Leben</h4>
           <p>
-          <p> Der Zukunft entspannt entgegengehen: Mit einer guten Finanzplanung</p>
-          <p> können Sie Vermögen aufbauen, finanzielle Spielräume für das Alter</p>
+            Der Zukunft entspannt entgegengehen: Mit einer guten Finanzplanung
+            können Sie Vermögen aufbauen, finanzielle Spielräume für das Alter
             schaffen und sich auf unerwartete Herausforderungen vorbereiten.
           </p>
         </motion.div>
-        <motion.img
-          className="hero-image"
-          src={advisorImage}
-          alt="Finanzberater"
+
+        {/* Bildbereich mit Fade-In von oben */}
+        <motion.div
+          className="image-block"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-        />
-      </section>
+        >
+          <img src={advisorImage} alt="Finanzberater" />
+        </motion.div>
+      </div>
 
       {/* Content Section */}
       <section className="content-section">
@@ -148,7 +152,7 @@ function Home() {
         </div>
         <img className="vorsorge-image" src={vorsorgeImage} alt="Vorsorge" />
       </section>
-    </div>
+    </>
   );
 }
 
