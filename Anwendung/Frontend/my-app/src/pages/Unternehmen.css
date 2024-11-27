@@ -1,111 +1,89 @@
-/* Allgemeines Styling */
 .unternehmen-page {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #e8e4e1;
-  color: #333;
-  line-height: 1.6;
+  color: #000000;
+  margin: 0 auto;
+  padding: 40px 0;
 }
 
-/* Hero Section */
-.hero-section {
-  position: relative;
-  text-align: center;
+/* Obere Sektion */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 50px;
 }
 
-.hero-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  filter: brightness(70%);
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.hero-text h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto;
-  animation: fadeInSlideUp 2s ease-in-out;
-}
-
-/* Content Section */
-.content-section {
-  padding: 40px 80px;
-}
-
-.text-block h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.text-block p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-}
-
-/* Image Gallery */
-.image-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.image-row {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.image-item {
-  flex: 1;
-  max-width: 45%;
+.header-text {
   text-align: center;
 }
 
-.image-item img {
-  width: 100%;
+.signature-font {
+  font-family: 'Brittany Signature', cursive;
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.title-font {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  white-space: nowrap;  /* Verhindert Umbrüche */
+  margin-left: 150px;
+}
+
+
+.header-image img {
+  width: 70%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+  object-fit: cover;
+  margin-left: 250px;
+  margin-top: 80px;
+  clip-path: inset(10px 0px 10px 0px);
 }
 
-.image-item p {
-  font-size: 1rem;
-  color: #555;
+/* Mittlere Sektion */
+.middle-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Galerie links, Text rechts */
+  gap: 5%;
+  margin-top: 50px;
 }
 
-/* Animation Keyframes */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.gallery {
+  display: flex; /* Horizontal nebeneinander */
+  gap: 5px;
+  margin-left: 120px;
 }
 
-@keyframes fadeInSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.gallery img {
+  width: 250px; /* Einheitliche Breite */
+  height: auto;
+  object-fit: cover;
+  margin-left: 60px;
+}
+
+.text-section {
+  line-height: 1.8;
+  margin-left: 300px;
+  
+}
+
+.text-section h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #000;
+}
+
+.text-section p {
+  margin: 10px 0 0;
+  color: #000000;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 10px;
+
+
 }
