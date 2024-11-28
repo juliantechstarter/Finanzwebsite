@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./Home.css";
 import advisorImage from "../assets/FINAERA-finanzberatung-berater.jpg";
 import vorsorgeImage from "../assets/vorsorge_2.jpg";
-
+import Spacer from "../components/Spacer";
 function Home() {
   const [expanded, setExpanded] = useState(null);
 
@@ -40,13 +40,14 @@ function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
+          <h4>so einzigartig wie Ihr Leben</h4>
           <h1>FINANZBERATUNG </h1>
-           <h4>so einzigartig wie Ihr Leben</h4>
-          <p>
-            Der Zukunft entspannt entgegengehen: Mit einer guten Finanzplanung
-            können Sie Vermögen aufbauen, finanzielle Spielräume für das Alter
-            schaffen und sich auf unerwartete Herausforderungen vorbereiten.
-          </p>
+           
+          
+           <p> Der Zukunft entspannt entgegengehen: Mit einer guten Finanzplanung können </p>
+           <p>Sie Vermögen aufbauen, finanzielle Spielräume für das Alter schaffen und </p>
+           <p>sich auf unerwartete Herausforderungen vorbereiten.</p>
+          
         </motion.div>
 
         {/* Bildbereich mit Fade-In von oben */}
@@ -106,9 +107,10 @@ function Home() {
       </section>
 
       {/* Vorsorge Section */}
+      <section id="vorsorge" className="vorsorge-section"></section>
       <section className="vorsorge-section">
         <div className="accordion-container">
-          <h2 className="vorsorge-title">Vorsorge</h2>
+          <h2 className="vorsorge-title">VORSORGE</h2>
           <p>
             Wer rechtzeitig für die Zukunft vorsorgt, kann sich auch im Alter
             die Lebensqualität bewahren.
@@ -152,6 +154,33 @@ function Home() {
         </div>
         <img className="vorsorge-image" src={vorsorgeImage} alt="Vorsorge" />
       </section>
+
+{/* Absicherung Section */}
+<section id="absicherung" className="absicherung-section"></section>
+<section className="absicherung-section">
+  <div className="absicherung-content">
+    
+    <div className="absicherung-text">
+      <h2>Einkommen absichern</h2>
+      <p>
+        Ihr gewohnter Lebensstandard ist vor allem von einer Sache abhängig: Ihrem Einkommen. 
+        Doch was passiert, wenn das Leben eine unerwartete Wendung nimmt und diese wichtige Lebensgrundlage wegbricht? 
+        Für diesen Fall gibt es Versicherungen, die die finanziellen Folgen auffangen und dadurch Sicherheit für Sie und Ihre Angehörigen bieten.
+      </p>
+      <img 
+      src={require("../assets/absicherung.jpg")} 
+      alt="Einkommen absichern" 
+      className="absicherung-image"
+    />
+    </div>
+  </div>
+</section>
+
+
+
+
+      {/* Spacer */}
+      <Spacer height="200px" />
     </>
   );
 }

@@ -38,8 +38,25 @@ function Navbar() {
           <span className="arrow">{showFinanzberatung ? "▾" : "▸"}</span>
           {showFinanzberatung && (
             <div className="dropdown">
-              <a href="#vorsorge" className="gradient-text">Vorsorge</a>
-              <a href="#absicherung" className="gradient-text">Absicherung</a>
+              <a href="#vorsorge" className="gradient-text" onClick={(e) => {
+  e.preventDefault();
+  const section = document.getElementById("vorsorge");
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}}>
+  Vorsorge
+</a>
+
+<a href="#absicherung" className="gradient-text" onClick={(e) => {
+  e.preventDefault();
+  const section = document.getElementById("absicherung");
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}}>
+  Absicherung
+</a>
               <a href="#vermoegen" className="gradient-text">Vermögen</a>
               <a href="#immobilie" className="gradient-text">Immobilie</a>
             </div>
@@ -67,7 +84,7 @@ function Navbar() {
           {showUnternehmen && (
             <div className="dropdown">
               <Link to="/unternehmen" className="gradient-text">
-                Über das Unternehmen
+                Das Unternehmen
               </Link>
               <Link to="/geschäftsführung" className="gradient-text">
                 Geschäftsführung

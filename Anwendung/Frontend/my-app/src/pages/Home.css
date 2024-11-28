@@ -1,12 +1,25 @@
 .home-container {
   display: flex;
   align-items: center;
-  
   padding: 30px;
+  background-color: #e8e4e1;
+  font-family: 'Helvetica Neue Light', sans-serif;
+  padding-bottom: 140px; /* Füllt den Abstand mit Hintergrundfarbe */
   background-color: #e8e4e1;
   
 }
+.image-block {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Bild weiter nach rechts schieben */
+  align-items: flex-start; /* Optional: Bild vertikal oben ausrichten */
+  padding-right: 30px; /* Abstand zum Rand rechts erhöhen */
+}
 
+.image-block img {
+  max-width: 90%; /* Bildgröße anpassen */
+  
+}
 /* home Section */
 .home-section {
   display: flex;
@@ -16,26 +29,46 @@
   padding: 20px;
   background-color: #e8e4e1;
   border-radius: 0cap;
+  
 }
 
 .home-text {
   flex: 1;
 }
 
-.home-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+.home-container h4 {
+  font-family: 'Brittany Signature', cursive;
+  font-size: 2rem;
+  margin-left: 150px;
   font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+
+}
+.home-container h1 {
+  font-size: 80px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  margin-left: 150px;
+  font-weight: 700;
+  color: #333;
 
 }
 
-.home-text p {
-  font-size: 1.2rem;
-  color: #666;
-  line-height: 1,2;
+.home-container h4 + h1 {
+  margin-top: 15px; /* Abstand zwischen h4 und h1 */
 }
 
-.home-image {
+.home-container p {
+
+  margin: 10px 0;
+  margin-left: 150px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+  
+}
+.home-image img{
   flex: 1;
   max-width: 50%;
   border-radius: 0px;
@@ -46,36 +79,39 @@
 .content-section {
   text-align: center;
   padding: 40px 20px;
-  background-color: #ffffff;
+  background-color: #e8e4e1;
+  
 }
 
 .content-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 60px;
   color: #333;
-  font-weight: 600;
-  background-color: #ffffff;
+  font-weight: 00;
+  background-color: #e8e4e1;
+  font-family: 'Helvetica Neue Light', sans-serif;
+ 
 }
 
 .content-cards {
   display: flex;
   gap: 20px;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #e8e4e1;
+  border-radius: 10px;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Stellt sicher, dass Inhalte und Button gleichmäßig verteilt werden */
   width: 300px;
   background: #ffffff;
   border: 1px solid #ffffffb1;
-  border-radius: 0px;
+  border-radius: 4px;
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
 }
 
 .card img {
@@ -88,6 +124,7 @@
   font-size: 1.2rem;
   color: #333;
   margin-bottom: 10px;
+   font-family: 'Helvetica Neue Light', sans-serif;
 }
 
 .card p {
@@ -97,7 +134,10 @@
 }
 
 .card button {
-  background: #d2a041;
+  margin-top: auto; /* Erzwingt, dass der Button nach unten gedrückt wird */
+  background: linear-gradient(90deg, #d4af37, #ffe28a, #d4af37);
+  background-size: 200%;
+  transition: background-position 0.3s ease, transform 0.2s ease;
   border: none;
   color: white;
   padding: 10px 15px;
@@ -108,7 +148,8 @@
 }
 
 .card button:hover {
-  background: #b38934;
+  background-position: 100%;
+  transform: translateY(-2px);
 }
 
 /* Vorsorge Section */
@@ -117,30 +158,37 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  padding: 40px 20px;
-  background-color: #ffffff;
+  padding: 80px 20px;
+  background-color: #e8e4e1;
   border-radius: 10px;
+  font-family: 'Helvetica Neue Light', sans-serif;
 }
 
 .accordion-container {
   flex: 1;
+  
 }
 
 .accordion-container h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #333;
   margin-bottom: 10px;
+  font-weight: 200px;
+  margin-left: 30px;
 }
 
 .accordion-container p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: #666;
   margin-bottom: 20px;
+  margin-left: 30px;
+  font-weight: 300;
 }
 
 .accordion {
   border: 1px solid #ddd;
   border-radius: 8px;
+  
 }
 
 .accordion-item {
@@ -198,8 +246,47 @@
 }
 
 .vorsorge-image {
+  position: relative; /* Relativer Bezugspunkt für das Bild */
   flex: 1;
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 3px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.absicherung-section {
+  display: flex;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #e8e4e1;
+}
+
+.absicherung-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.absicherung-image {
+  max-width: 100%;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.absicherung-text {
+  text-align: center;
+}
+
+.absicherung-text h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.absicherung-text p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
 }

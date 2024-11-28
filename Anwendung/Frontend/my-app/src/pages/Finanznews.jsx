@@ -65,7 +65,7 @@ function Finanznews() {
                 className="news-item"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }} // Verzögerung pro Artikel
+                transition={{ duration: 0.1, delay: index * 0.1 }} // Verzögerung pro Artikel
               >
                 {article.urlToImage && (
                   <div className="news-image">

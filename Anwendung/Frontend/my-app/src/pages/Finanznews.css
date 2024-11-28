@@ -80,6 +80,8 @@
   width: 100%;
   max-width: 1200px; /* Optional: Begrenze die Gesamtbreite */
   margin: 0 auto; /* Zentriere das Grid innerhalb der Seite */
+  padding-bottom: 140px; /* Füllt den Abstand mit Hintergrundfarbe */
+  background-color: #e8e4e1;
 }
 
 
