@@ -88,6 +88,7 @@ function Finanznews() {
           )}
         </div>
       </div>
+  
     </div>
   );
 }

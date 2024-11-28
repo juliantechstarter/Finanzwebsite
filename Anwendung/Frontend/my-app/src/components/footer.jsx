@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./footer.css";
 
 function Footer() {
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowFooter(true);
+    }, 1000); // 1 Sekunde Verzögerung
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <footer className="footer">
+    <footer className={`footer ${showFooter ? "visible" : ""}`}>
       <div className="footer-container">
         {/* Kontakt */}
         <div className="footer-column">

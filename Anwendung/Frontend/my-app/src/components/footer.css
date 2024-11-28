@@ -1,6 +1,6 @@
 /* Footer Grundlayout */
 .footer {
-  background-color: #d9d7d1; /* Heller Hintergrund */
+  background-color: #d9d7d1;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
   font-size: 0.9rem;
@@ -10,8 +10,17 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  opacity: 0; /* Unsichtbar beim Start */
+  transform: translateY(20px); /* Leicht nach unten verschoben */
+  transition: opacity 1s ease, transform 1s ease; /* Sanfter Übergang */
+  
 }
 
+.footer.visible {
+  opacity: 1; /* Sichtbar */
+  transform: translateY(0); /* Zurück an die Ausgangsposition */
+}
 /* Container für die Spalten */
 .footer-container {
   display: flex;
@@ -111,6 +120,7 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden; /* Deaktiviert horizontales Scrollen */
 }
 
 #root {

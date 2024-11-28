@@ -39,8 +39,7 @@ function Geschaeftsfuehrung() {
           </p>
         </div>
       </div>
-      <div className="spacer"></div>
-      <div className="spacer"></div>
+      <div style={{ height: "200px" }}></div>
     </div>
   );
 }
