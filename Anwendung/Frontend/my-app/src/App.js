@@ -1,3 +1,4 @@
+import ScrollToTop from './components/ScrollToTop'; // ScrollToTop importieren
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -9,7 +10,6 @@ import Geschaeftsfuehrung from './pages/Geschaeftsfuehrung';
 import StartPlaner from './pages/StartPlaner';
 import Navbar from './components/Navbar';
 import Footer from './components/footer'; // Footer importieren
-import ScrollToTop from './components/ScrollToTop'; // ScrollToTop importieren
 
 function App() {
   const [isLoading, setIsLoading] = useState(true); // Ladezustand
