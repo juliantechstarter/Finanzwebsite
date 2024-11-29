@@ -62,49 +62,50 @@ function Home() {
       </div>
 
       {/* Content Section */}
-      <section className="content-section">
-        <h2>Gute Antworten für jeden Lebensabschnitt</h2>
-        <div className="content-cards">
-          <div className="card">
-            <img src={require("../assets/av1.jpg")} alt="Best Ager" />
-            <p>20. Oktober 2024</p>
-            <h3>Altersvorsorge für Best Ager</h3>
-            <p>
-              Man nennt sie nicht von ungefähr „die besten Jahre“ – die Zeit um
-              die Fünfzig herum. Denn dann ist vieles schon erreicht –
-              persönlich wie finanziell. Und die Versuchung ist groß, das Leben
-              auf „Entspannungsmodus“ zu stellen. Doch das wäre das falsche
-              Signal. Besonders für die Altersvorsorge.
-            </p>
-            <button>Mehr erfahren</button>
-          </div>
-          <div className="card">
-            <img src={require("../assets/av2.jpg")} alt="Ruhestand" />
-            <p>3. November 2024</p>
-            <h3>Altersvorsorge kurz vor dem Ruhestand</h3>
-            <p>
-              Endlich mehr Zeit haben für Familie und Freunde, Hobbys pflegen
-              und verreisen: Viele Menschen haben ganz genaue Vorstellungen für
-              die Zeit nach der Berufstätigkeit. Damit dieser Lebensabschnitt
-              so schön wird, wie erhofft, bedarf es einer guten Planung – und
-              der Ruhestand kann kommen.
-            </p>
-            <button>Mehr erfahren</button>
-          </div>
-          <div className="card">
-            <img src={require("../assets/av3.jpg")} alt="Junge Menschen" />
-            <p>11. Oktober 2024</p>
-            <h3>Altersvorsorge für junge Menschen</h3>
-            <p>
-              Wenn Menschen jung sind, liegt das Alter gedanklich in weiter
-              Ferne. In dieser Zeit des „Durchstartens“ bleibt die Planung der
-              Altersvorsorge leicht auf der Strecke. Dabei macht ein früher
-              Einstieg Sinn: Er senkt den Kapitaleinsatz und schafft Optionen.
-            </p>
-            <button>Mehr erfahren</button>
-          </div>
-        </div>
-      </section>
+      <div className="content-section">
+  <h2>Gute Antworten für jeden Lebensabschnitt</h2>
+  <div className="content-cards">
+    <div className="content-card">
+      <img src={require("../assets/av1.jpg")} alt="Best Ager" />
+      <p>20. Oktober 2024</p>
+      <h3>Altersvorsorge für Best Ager</h3>
+      <p>
+        Man nennt sie nicht von ungefähr „die besten Jahre“ – die Zeit um
+        die Fünfzig herum. Denn dann ist vieles schon erreicht –
+        persönlich wie finanziell. Und die Versuchung ist groß, das Leben
+        auf „Entspannungsmodus“ zu stellen. Doch das wäre das falsche
+        Signal. Besonders für die Altersvorsorge.
+      </p>
+      <button>Mehr erfahren</button>
+    </div>
+    <div className="content-card">
+      <img src={require("../assets/av2.jpg")} alt="Ruhestand" />
+      <p>3. November 2024</p>
+      <h3>Altersvorsorge kurz vor dem Ruhestand</h3>
+      <p>
+        Endlich mehr Zeit haben für Familie und Freunde, Hobbys pflegen
+        und verreisen: Viele Menschen haben ganz genaue Vorstellungen für
+        die Zeit nach der Berufstätigkeit. Damit dieser Lebensabschnitt
+        so schön wird, wie erhofft, bedarf es einer guten Planung – und
+        der Ruhestand kann kommen.
+      </p>
+      <button>Mehr erfahren</button>
+    </div>
+    <div className="content-card">
+      <img src={require("../assets/av3.jpg")} alt="Junge Menschen" />
+      <p>11. Oktober 2024</p>
+      <h3>Altersvorsorge für junge Menschen</h3>
+      <p>
+        Wenn Menschen jung sind, liegt das Alter gedanklich in weiter
+        Ferne. In dieser Zeit des „Durchstartens“ bleibt die Planung der
+        Altersvorsorge leicht auf der Strecke. Dabei macht ein früher
+        Einstieg Sinn: Er senkt den Kapitaleinsatz und schafft Optionen.
+      </p>
+      <button>Mehr erfahren</button>
+    </div>
+  </div>
+</div>
+
 
       {/* Vorsorge Section */}
       <section id="vorsorge" className="vorsorge-section"></section>

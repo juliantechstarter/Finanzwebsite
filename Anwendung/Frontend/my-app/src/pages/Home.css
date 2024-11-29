@@ -80,17 +80,15 @@
   text-align: center;
   padding: 40px 20px;
   background-color: #e8e4e1;
-  
 }
 
 .content-section h2 {
   font-size: 3rem;
   margin-bottom: 60px;
   color: #333;
-  font-weight: 00;
+  font-weight: 100;
   background-color: #e8e4e1;
   font-family: 'Helvetica Neue Light', sans-serif;
- 
 }
 
 .content-cards {
@@ -101,10 +99,10 @@
   border-radius: 10px;
 }
 
-.card {
+.content-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Stellt sicher, dass Inhalte und Button gleichmäßig verteilt werden */
+  justify-content: space-between;
   width: 300px;
   background: #ffffff;
   border: 1px solid #ffffffb1;
@@ -114,27 +112,27 @@
   transition: transform 0.2s;
 }
 
-.card img {
+.content-card img {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 10px;
 }
 
-.card h3 {
+.content-card h3 {
   font-size: 1.2rem;
   color: #333;
   margin-bottom: 10px;
-   font-family: 'Helvetica Neue Light', sans-serif;
+  font-family: 'Helvetica Neue Light', sans-serif;
 }
 
-.card p {
+.content-card p {
   font-size: 1rem;
   color: #666;
   margin-bottom: 10px;
 }
 
-.card button {
-  margin-top: auto; /* Erzwingt, dass der Button nach unten gedrückt wird */
+.content-card button {
+  margin-top: auto;
   background: linear-gradient(90deg, #d4af37, #ffe28a, #d4af37);
   background-size: 200%;
   transition: background-position 0.3s ease, transform 0.2s ease;
@@ -147,10 +145,11 @@
   transition: background 0.3s;
 }
 
-.card button:hover {
+.content-card button:hover {
   background-position: 100%;
   transform: translateY(-2px);
 }
+
 
 /* Vorsorge Section */
 .vorsorge-section {

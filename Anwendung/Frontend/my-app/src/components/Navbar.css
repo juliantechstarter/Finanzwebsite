@@ -1,5 +1,5 @@
 /* Allgemeines Styling der Navbar */
-.navbar {
+.navbar-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -18,19 +18,19 @@
 }
 
 /* Navbar sichtbar */
-.navbar.visible {
+.navbar-container.visible {
   transform: translateY(0);
   opacity: 1;
 }
 
 /* Navbar ausgeblendet */
-.navbar.hidden {
+.navbar-container.hidden {
   transform: translateY(-100%);
   opacity: 0;
 }
 
 /* Logo */
-.logo {
+.navbar-logo {
   position: absolute;
   top: 12px;
   left: 20px;
@@ -40,7 +40,7 @@
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.logo:hover {
+.navbar-logo:hover {
   transform: scale(1.1);
   filter: brightness(1.2);
 }
@@ -56,19 +56,19 @@
 }
 
 /* Menüpunkte */
-.navbar-menu li {
+.navbar-menu-item {
   position: relative;
   margin-right: 25px;
   font-weight: 300;
   transition: all 0.3s ease;
 }
 
-.navbar-menu li:last-child {
+.navbar-menu-item:last-child {
   margin-right: 0;
 }
 
 /* Gradient-Text (Goldene Schrift) */
-.gradient-text {
+.navbar-gradient-text {
   background: linear-gradient(90deg, #e8a81f, #ffe28a, #c78d21);
   background-size: 200%;
   background-position: 50%;
@@ -80,13 +80,13 @@
   transition: background-position 0.5s ease, transform 0.2s ease;
 }
 
-.gradient-text:hover {
+.navbar-gradient-text:hover {
   background-position: 100%;
   transform: scale(1.1);
 }
 
 /* Dropdown-Menü */
-.dropdown {
+.navbar-dropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -100,7 +100,7 @@
 }
 
 /* Links im Dropdown */
-.dropdown a {
+.navbar-dropdown-link {
   display: block;
   padding: 10px 15px;
   color: #222e3c;
@@ -110,13 +110,13 @@
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.dropdown a:hover {
+.navbar-dropdown-link:hover {
   background-color: rgba(255, 255, 255, 0.5);
   color: #000;
 }
 
 /* Pfeil neben Dropdown-Menüs */
-.arrow {
+.navbar-arrow {
   font-size: 0.9rem;
   margin-left: 5px;
   color: transparent;
@@ -128,7 +128,7 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .navbar {
+  .navbar-container {
     flex-direction: column;
     align-items: flex-start;
     height: auto;
@@ -140,17 +140,17 @@
     margin-right: 0;
   }
 
-  .navbar-menu li {
+  .navbar-menu-item {
     margin-bottom: 15px;
     margin-right: 0;
   }
 
-  .dropdown {
+  .navbar-dropdown {
     position: static;
     box-shadow: none;
   }
 
-  .logo {
+  .navbar-logo {
     position: static;
     margin-bottom: 15px;
   }

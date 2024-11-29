@@ -21,72 +21,83 @@ function Navbar() {
   }, [prevScrollPos]);
 
   return (
-    <nav className={`navbar ${isVisible ? "visible" : "hidden"}`}>
-      {/* Logo führt zur Startseite */}
-      <Link to="/" className="logo-container">
-        <img src={logo} alt="Finaera Logo" className="logo" />
+    <nav className={`navbar-container ${isVisible ? "visible" : "hidden"}`}>
+      <Link to="/" className="navbar-logo-container">
+        <img src={logo} alt="Finaera Logo" className="navbar-logo" />
       </Link>
       <ul className="navbar-menu">
-        {/* Finanzberatung Dropdown */}
         <li
+          className="navbar-menu-item"
           onMouseEnter={() => setShowFinanzberatung(true)}
           onMouseLeave={() => setShowFinanzberatung(false)}
         >
-          <Link to="/home" className="gradient-text">
+          <Link to="/home" className="navbar-gradient-text">
             Finanzberatung
           </Link>
-          <span className="arrow">{showFinanzberatung ? "▾" : "▸"}</span>
+          <span className="navbar-arrow">{showFinanzberatung ? "▾" : "▸"}</span>
           {showFinanzberatung && (
-            <div className="dropdown">
-              <a href="#vorsorge" className="gradient-text" onClick={(e) => {
-  e.preventDefault();
-  const section = document.getElementById("vorsorge");
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-}}>
-  Vorsorge
-</a>
-
-<a href="#absicherung" className="gradient-text" onClick={(e) => {
-  e.preventDefault();
-  const section = document.getElementById("absicherung");
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-}}>
-  Absicherung
-</a>
-              <a href="#vermoegen" className="gradient-text">Vermögen</a>
-              <a href="#immobilie" className="gradient-text">Immobilie</a>
+            <div className="navbar-dropdown">
+              <a
+                href="#vorsorge"
+                className="navbar-dropdown-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const section = document.getElementById("vorsorge");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                Vorsorge
+              </a>
+              <a
+                href="#absicherung"
+                className="navbar-dropdown-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const section = document.getElementById("absicherung");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                Absicherung
+              </a>
+              <a href="#vermoegen" className="navbar-dropdown-link">
+                Vermögen
+              </a>
+              <a href="#immobilie" className="navbar-dropdown-link">
+                Immobilie
+              </a>
             </div>
           )}
         </li>
 
-        <li>
-          <Link to="/finanzplaner" className="gradient-text">
+        <li className="navbar-menu-item">
+          <Link to="/finanzplaner" className="navbar-gradient-text">
             Finanzplaner
           </Link>
         </li>
 
-        <li>
-          <Link to="/finanznews" className="gradient-text">
+        <li className="navbar-menu-item">
+          <Link to="/finanznews" className="navbar-gradient-text">
             Finanznews
           </Link>
         </li>
 
         <li
+          className="navbar-menu-item"
           onMouseEnter={() => setShowUnternehmen(true)}
           onMouseLeave={() => setShowUnternehmen(false)}
         >
-          <span className="gradient-text">Unternehmen</span>
-          <span className="arrow">{showUnternehmen ? "▾" : "▸"}</span>
+          <span className="navbar-gradient-text">Unternehmen</span>
+          <span className="navbar-arrow">{showUnternehmen ? "▾" : "▸"}</span>
           {showUnternehmen && (
-            <div className="dropdown">
-              <Link to="/unternehmen" className="gradient-text">
+            <div className="navbar-dropdown">
+              <Link to="/unternehmen" className="navbar-dropdown-link">
                 Das Unternehmen
               </Link>
-              <Link to="/geschäftsführung" className="gradient-text">
+              <Link to="/geschäftsführung" className="navbar-dropdown-link">
                 Geschäftsführung
               </Link>
             </div>
