@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './MeinAccount.css';
+            Mein Konto
 import defaultAvatar from '../assets/av1.jpg';
 import logo from '../assets/FINAERALOGO.png';
 
-const MeinAccount = () => {
+            Mein Konto
   const navigate = useNavigate();
   const [showNotification, setShowNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState('');
