@@ -6,61 +6,90 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Die Seite nimmt die gesamte Bildschirmhöhe ein */
-  background-image: url('../components/fpbg.png'); /* Hintergrundbild */
-  background-size: cover; /* Hintergrundbild soll den gesamten Bereich abdecken */
-  background-position: center; /* Bild zentrieren */
-  background-repeat: no-repeat; /* Verhindert Wiederholung des Bildes */
+  min-height: 100vh;
+  background-image: url('../components/fpbg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0; /* Start mit unsichtbar */
+  animation: fadeIn 1s ease-in-out forwards; /* Sanftes Einblenden */
 }
 
-/* Wrapper für das Login-Formular */
 .login-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.9); /* Weißer Hintergrund mit Transparenz */
-  border-radius: 10px; /* Runde Ecken */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Schatten/
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 400px;
-  box-sizing: border-box; /* Box-Modell*/
+  box-sizing: border-box;
+  opacity: 0; /* Start unsichtbar */
+  transition: opacity 1s ease-in-out;
 }
 
-/* Zusätzliche Anpassungen für den Button und den Text */
-.login-form button {
-  background-color: #333333; /* Dunklere Farbe für den Button */
-  color: #fff; /* Weißer Text*/
+.login-wrapper.visible {
+  opacity: 1; /* Sichtbar nach dem Einblenden */
+}
+
+/* Werbung Styling */
+.ad-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+  opacity: 0; /* Start unsichtbar */
+  animation: fadeIn 1s ease-in-out forwards 3s; /* Einfaden nach 2 Sekunden */
+}
+
+.ad-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.ad-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
   border: none;
-  padding: 0.75rem 1rem; /* Mehr Padding*/
-  border-radius: 5px; /* Runde Ecken*/
+  font-size: 1.5rem;
+  color: #eec240;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s; /* Übergang beim Hover-Effekt */
 }
 
-.login-form button:hover {
-  background-color: #555555; /* Hellere Farbe bei Hover*/
+.ad-close-btn:hover {
+  color: #d9534f;
 }
 
-/* Styling für den Link "Kennwort vergessen?" */
-.login-form .forgot-password {
-  text-align: right;
-  margin-bottom: 1rem;
-  color: #007bff; /* Blaue Farbe*/
-  text-decoration: underline;
-}
-
-/* Styling für die Fehlernachricht */
-.login-form .error-message {
-  color: #d9534f; /* Rote Farbe*/
-  font-weight: bold;
-  margin-bottom: 1rem;
+/* Animation für sanftes Einfaden */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Anpassungen für mobile Geräte */
 @media (max-width: 768px) {
-  .login-wrapper {
-    max-width: 90%;
+  .ad-popup {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .ad-image {
+    max-width: 100%;
   }
 }

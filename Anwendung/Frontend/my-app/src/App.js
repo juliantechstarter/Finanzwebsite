@@ -9,12 +9,12 @@ import Geschaeftsfuehrung from './pages/Geschaeftsfuehrung';
 import StartPlaner from './pages/StartPlaner';
 import Navbar from './components/Navbar';
 import Footer from './components/footer'; // Footer importieren
+import ScrollToTop from './components/ScrollToTop'; // ScrollToTop importieren
 
 function App() {
   const [isLoading, setIsLoading] = useState(true); // Ladezustand
 
   useEffect(() => {
-    // Simuliere ein Seitenlade-Ereignis (z. B. Daten laden)
     const timer = setTimeout(() => {
       setIsLoading(false); // Ladezustand nach 1 Sekunde aufheben
     }, 1000);
@@ -24,18 +24,19 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop /> {/* ScrollToTop-Komponente */}
       <Routes>
-        {/* Starte Seite */}
+        {/* Startseite */}
         <Route path="/" element={<Start />} />
 
-        {/* Hauptseiten mit Footer */}
+        {/* Hauptseiten mit Navbar und Footer */}
         <Route
           path="/home"
           element={
             <>
               <Navbar />
               <Home />
-              {!isLoading && <Footer />} {/* Footer erst nach Laden */}
+              {!isLoading && <Footer />} {/* Footer erst nach dem Laden */}
             </>
           }
         />
