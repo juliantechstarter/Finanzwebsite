@@ -56,7 +56,7 @@
 }
 
 .headerImage img {
-  width: 100%; /* Skaliert die Breite */
+  width: 90%; /* Skaliert die Breite */
   height: auto;
   opacity: 0;
   animation: fadeInSlideDown 2s ease-in-out forwards;
@@ -67,26 +67,28 @@
 
 .middleSection {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .gallery {
   flex: 1;
   display: flex;
   justify-content: space-between;
-  gap: 140px;
-  margin-top: 20px;
+  gap: 120px;
+
+  
   
 }
 
 .gallery img {
-  width: 40%; /* Passe die Breite der Bilder an */
+  width: 30%; /* Passe die Breite der Bilder an */
   height: auto; /* Behalte das Seitenverhältnis bei */
   object-fit: cover; /* Verhindert Verzerrung */
   opacity: 0;
   animation: fadeInSlideUp 2s ease-in-out forwards;
   animation-delay: 0.5s; /* Verzögerung */
-  margin-left: -100px; /* Falls erforderlich */
+  margin-left: -60px; /* Falls erforderlich */
+  margin-top: 10px;
 }
 
 .textSection {
@@ -94,7 +96,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 5px;
+  gap: 8px;
   opacity: 0;
   animation: fadeIn 2s ease-in-out forwards;
   animation-delay: 0.5s; /* Verzögerung */

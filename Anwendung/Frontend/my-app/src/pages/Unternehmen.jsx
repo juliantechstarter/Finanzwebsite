@@ -22,8 +22,8 @@ function Unternehmen() {
       {/* Mittlerer Abschnitt */}
       <div className={styles.middleSection}>
         <div className={styles.gallery}>
-          <img src={image1} alt="Gebäude" />
           <img src={image2} alt="Architektur" />
+          <img src={image1} alt="Gebäude" />
           <img src={image3} alt="Lounge" />
         </div>
         <div className={styles.textSection}>

@@ -19,41 +19,41 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.9); /* Weißer Hintergrund mit leichter Transparenz */
+  background-color: rgba(255, 255, 255, 0.9); /* Weißer Hintergrund mit Transparenz */
   border-radius: 10px; /* Runde Ecken */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sanfter Schatten für Dimension */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Schatten/
   width: 100%;
   max-width: 400px;
-  box-sizing: border-box; /* Box-Modell für besseren Umgang mit Breite/Padding */
+  box-sizing: border-box; /* Box-Modell*/
 }
 
 /* Zusätzliche Anpassungen für den Button und den Text */
 .login-form button {
   background-color: #333333; /* Dunklere Farbe für den Button */
-  color: #fff; /* Weißer Text für besseren Kontrast */
+  color: #fff; /* Weißer Text*/
   border: none;
-  padding: 0.75rem 1rem; /* Mehr Padding für eine bessere Haptik */
-  border-radius: 5px; /* Runde Ecken für ein freundlicheres Erscheinungsbild */
+  padding: 0.75rem 1rem; /* Mehr Padding*/
+  border-radius: 5px; /* Runde Ecken*/
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s; /* Sanfter Übergang beim Hover-Effekt */
+  transition: background-color 0.3s; /* Übergang beim Hover-Effekt */
 }
 
 .login-form button:hover {
-  background-color: #555555; /* Hellere Farbe bei Hover, um Interaktivität anzuzeigen */
+  background-color: #555555; /* Hellere Farbe bei Hover*/
 }
 
 /* Styling für den Link "Kennwort vergessen?" */
 .login-form .forgot-password {
   text-align: right;
   margin-bottom: 1rem;
-  color: #007bff; /* Blaue Farbe für einen klassischen Link-Look */
+  color: #007bff; /* Blaue Farbe*/
   text-decoration: underline;
 }
 
 /* Styling für die Fehlernachricht */
 .login-form .error-message {
-  color: #d9534f; /* Rote Farbe für deutliche Fehlermeldungen */
+  color: #d9534f; /* Rote Farbe*/
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -61,6 +61,6 @@
 /* Anpassungen für mobile Geräte */
 @media (max-width: 768px) {
   .login-wrapper {
-    max-width: 90%; /* Auf mobilen Geräten etwas mehr Platz nutzen, damit der Login-Block nicht zu schmal wird */
+    max-width: 90%;
   }
 }

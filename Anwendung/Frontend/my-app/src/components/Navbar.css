@@ -1,17 +1,48 @@
 /* Allgemeines Styling der Navbar */
 .navbar {
-  background-color: #222e3c; /* Dunkler Hintergrund */
-  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: url('../assets/NAVBARBG.png') center no-repeat;
+  background-size: cover;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: 'Helvetica Neue Light', sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Navbar sichtbar */
+.navbar.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Navbar ausgeblendet */
+.navbar.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
 }
 
 /* Logo */
 .logo {
-  height: 60px;
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  height: 80px;
+  z-index: 1010;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 /* Navbar-Menü */
@@ -21,6 +52,7 @@
   align-items: center;
   margin: 0;
   padding: 0;
+  margin-right: 90px;
 }
 
 /* Menüpunkte */
@@ -37,7 +69,7 @@
 
 /* Gradient-Text (Goldene Schrift) */
 .gradient-text {
-  background: linear-gradient(90deg, #e8a81f, #ffe28a, #c78d21); /* Exakter Verlauf wie im Logo */
+  background: linear-gradient(90deg, #e8a81f, #ffe28a, #c78d21);
   background-size: 200%;
   background-position: 50%;
   background-clip: text;
@@ -49,8 +81,8 @@
 }
 
 .gradient-text:hover {
-  background-position: 100%; /* Animierter Verlauf beim Hover */
-  transform: scale(1.1); /* Leichte Vergrößerung beim Hover */
+  background-position: 100%;
+  transform: scale(1.1);
 }
 
 /* Dropdown-Menü */
@@ -58,11 +90,11 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.8); /* Transparenter weißer Hintergrund */
-  backdrop-filter: blur(8px); /* Weichzeichner-Effekt auf den Hintergrund */
-  padding: 0; /* Kein zusätzlicher Abstand */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtiler Schatten */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Leichte Abgrenzung */
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 0;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   min-width: 200px;
   z-index: 1000;
 }
@@ -71,7 +103,7 @@
 .dropdown a {
   display: block;
   padding: 10px 15px;
-  color: #222e3c; /* Dunkle Schriftfarbe */
+  color: #222e3c;
   font-size: 0.95rem;
   font-weight: 400;
   white-space: nowrap;
@@ -79,8 +111,8 @@
 }
 
 .dropdown a:hover {
-  background-color: rgba(255, 255, 255, 0.5); /* Hellerer transparenter Hintergrund beim Hover */
-  color: #000; /* Schwarze Schriftfarbe beim Hover */
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
 }
 
 /* Pfeil neben Dropdown-Menüs */
@@ -88,7 +120,7 @@
   font-size: 0.9rem;
   margin-left: 5px;
   color: transparent;
-  background: linear-gradient(90deg, #d4af37, #ffe28a, #d4af37); /* Gleicher Verlauf wie bei der Schrift */
+  background: linear-gradient(90deg, #d4af37, #ffe28a, #d4af37);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -99,93 +131,29 @@
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    height: auto;
   }
 
   .navbar-menu {
     flex-direction: column;
     width: 100%;
+    margin-right: 0;
   }
 
-  li {
+  .navbar-menu li {
     margin-bottom: 15px;
+    margin-right: 0;
   }
 
   .dropdown {
     position: static;
     box-shadow: none;
   }
-}
 
-/* Fixierte Navbar mit Übergängen */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background-color: #222e3c; /* Dunkler Hintergrund */
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Navbar sichtbar */
-.navbar.visible {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-/* Navbar ausgeblendet */
-.navbar.hidden {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-/* Links innerhalb der Navbar */
-.navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar-links li {
-  cursor: pointer;
-}
-
-.navbar {
-  background: url('../assets/NAVBARBG.png') center no-repeat;
-  background-size: cover; /* Glanzeffekt */
-  height: 60px; /* Höhe der Navbar */
-}
-
-/* Logo */
-.logo {
-  position: absolute;
-  top: 12px;
-  left: 20px;
-  height: 80px;
-  z-index: 1010;
-  object-fit: contain;
-  transition: transform 0.3s ease, filter 0.3s ease; /* Sanfte Übergänge */
-}
-
-.navbar-menu {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  margin-right: 90px; /* Verschiebe nach links */
-}
-
-/* Hover-Effekt für das Logo */
-.logo:hover {
-  transform: scale(1.1); /* Vergrößert das Logo leicht */
-  filter: brightness(1.2); /* Erhöht die Helligkeit des Logos */
+  .logo {
+    position: static;
+    margin-bottom: 15px;
+  }
 }
 
 /* Smooth Scrolling */

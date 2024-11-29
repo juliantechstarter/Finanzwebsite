@@ -1,0 +1,92 @@
+/* Allgemeine Einstellungen */
+.startContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../assets/fpbg.png'); /* Hintergrundbild */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Zentraler Inhalt */
+.centerContent {
+  text-align: center;
+  z-index: 10;
+}
+
+/* Titel oben */
+.startTitle,
+.startTitleBelow {
+  color: white;
+  font-size: 3rem;
+  margin: 20px 0;
+  font-family: "Frathaman Holland", serif;
+  font-weight: normal; /* Normale Schriftstärke */
+  opacity: 0; /* Startzustand für Animation */
+  position: relative; /* Für Animationen */
+}
+
+/* Fade-in-Animationen */
+.fadeInFromLeft {
+  animation: fadeInLeft 1.5s ease-in-out forwards;
+}
+
+.fadeInFromRight {
+  animation: fadeInRight 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%); /* Von weit links starten */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Mittig enden */
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50%); /* Von weit rechts starten */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Mittig enden */
+  }
+}
+
+/* Logo */
+.startLogo {
+  width: 600px; /* Größe des Logos */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.startLogo:hover {
+  transform: scale(1.1); /* Hover-Effekt */
+}
+
+/* Klick-Animation für Logo */
+.logoClicked {
+  animation: logoDisappear 1s ease-in-out forwards; /* Animation bei Klick */
+}
+
+@keyframes logoDisappear {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2); /* Leicht vergrößern */
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8); /* Verkleinern und ausblenden */
+  }
+}
