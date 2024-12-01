@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // useNavigate Hook für die Navigation
 import './Login.css';
-import loginBalken from '../assets/loginbalken.png'; // Import des Bildes aus assets
+import loginBalken from '../assets/loginbalken.png'; 
 
 function Login() {
   const [email, setEmail] = useState('');
