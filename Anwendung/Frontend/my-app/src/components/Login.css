@@ -111,7 +111,7 @@ button[type="submit"]:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  img { max-width: 257%; height: auto; }
+  img { max-width: 260%; height: auto; }
   margin: 0; /* Eventuelle automatische Außenabstände entfernen */
   padding: 0; /* Eventuelle Innenabstände entfernen */
   box-sizing: border-box; /* Paddings und Borders berücksichtigen */
